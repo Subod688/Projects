@@ -1,0 +1,2134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="color-scheme" content="light">
+<meta name="theme-color" content="#17332B">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="ANE Bills">
+<meta name="application-name" content="ANE Bills">
+<link rel="icon" type="image/png" sizes="192x192" href="data:image/png;base64,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">
+<link rel="apple-touch-icon" sizes="180x180" href="data:image/png;base64,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">
+<title>All Nepal Enterprises Bills</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&family=Libre+Caslon+Display&display=swap" rel="stylesheet">
+<style>
+/* ===== Design tokens: ledger green, paper, brass, ledger-red ink ===== */
+:root{
+  --green:#17332B; --green-2:#24493E; --green-3:#3B6657;
+  --paper:#F5F6F2; --sheet:#FFFFFF; --rule:#DCE3DD; --rule-2:#C5D0C8;
+  --ink:#1C2421; --muted:#66726C;
+  --brass:#A9843F; --brass-soft:#EFE6D2;
+  --red:#A3271F; --red-rule:#D9A19B;
+  --serif:'Libre Caslon Display', Georgia, 'Times New Roman', serif;
+  --sans:'Hanken Grotesk', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --r-sm:8px; --r-md:12px;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);font-size:16px;line-height:1.5;font-variant-numeric:tabular-nums}
+button{font:inherit;color:inherit;cursor:pointer}
+:focus-visible{outline:2px solid var(--brass);outline-offset:2px}
+
+/* ===== Header ===== */
+.top{background:var(--green);color:#F3F1EA;position:sticky;top:0;z-index:20}
+.top-in{max-width:1240px;margin:0 auto;padding:14px 16px;display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.brand{font-family:var(--serif);font-size:23px;line-height:1.1;letter-spacing:.2px}
+.brand small{display:block;font-family:var(--sans);font-size:13px;color:#A6BAB1;margin-top:3px}
+.seg{display:flex;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.16);border-radius:999px;padding:3px}
+.seg button{border:0;background:transparent;color:#C8D5CF;padding:8px 16px;border-radius:999px;font-weight:600;font-size:14.5px;display:flex;align-items:center;gap:6px}
+.seg button[aria-pressed="true"]{background:#F3F1EA;color:var(--green)}
+.seg svg{display:block}
+
+/* ===== Layout ===== */
+main{max-width:1240px;margin:0 auto;padding:28px 16px 40px}
+.view{display:none}.view.on{display:block}
+.narrow{max-width:620px;margin:0 auto}
+h1{font-family:var(--serif);font-weight:400;font-size:36px;line-height:1.1;margin:0 0 6px;letter-spacing:-.2px}
+.sub{color:var(--muted);margin:0 0 26px}
+
+/* ===== Form ===== */
+.group{margin-bottom:22px}
+.lbl,.field label{display:block;font-size:13.5px;font-weight:600;color:var(--muted);margin-bottom:6px}
+.field{margin-bottom:20px}
+.field input{width:100%;border:0;border-bottom:1.5px solid var(--rule-2);border-radius:0;background:transparent;padding:6px 0 8px;font:inherit;font-size:18px;color:var(--ink)}
+.field input::placeholder{color:#A9B3AE}
+.field input:focus{outline:none;border-bottom-color:var(--green);box-shadow:0 1px 0 var(--green)}
+.field input.auto{background:linear-gradient(to right,var(--brass-soft),rgba(239,230,210,0) 70%)}
+.hint{display:none;align-items:center;gap:8px;margin:-10px 0 18px;font-size:13.5px;color:#7A5E28}
+.hint.show{display:flex}
+.hint button{border:0;background:none;padding:0;color:#7A5E28;font-weight:600;font-size:13.5px;text-decoration:underline;text-underline-offset:3px}
+
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chips label{position:relative}
+.chips input{position:absolute;inset:0;opacity:0;margin:0;cursor:pointer}
+.chips span{display:inline-block;padding:8px 18px;border:1.5px solid var(--rule-2);border-radius:999px;font-weight:500;background:var(--sheet);transition:background .15s,border-color .15s}
+.chip-add{border:1.5px dashed var(--rule-2);background:transparent;border-radius:999px;padding:8px 16px;font-weight:600;color:var(--green-2)}
+.chip-add:hover{border-color:var(--green)}
+.chips input:checked + span{background:var(--green);border-color:var(--green);color:#fff}
+.chips input:focus-visible + span{outline:2px solid var(--brass);outline-offset:2px}
+
+/* Item lines: a small ledger */
+.lines{background:var(--sheet);border:1px solid var(--rule);border-radius:var(--r-md);overflow:hidden}
+.lhead,.line{display:grid;grid-template-columns:1fr 84px 92px 100px 34px;column-gap:10px;align-items:center;padding:0 14px}
+.lhead{font-size:12.5px;font-weight:600;color:var(--muted);padding-top:10px;padding-bottom:8px;border-bottom:1px solid var(--rule)}
+.line{border-bottom:1px solid var(--rule);min-height:52px}
+.line input{width:100%;min-width:0;border:0;background:transparent;font:inherit;color:var(--ink);padding:13px 0}
+.line input::placeholder{color:#A9B3AE}
+.line input:focus{outline:none;box-shadow:inset 0 -2px 0 var(--green)}
+.line input[type=number]{-moz-appearance:textfield}
+.line input[type=number]::-webkit-inner-spin-button,.line input[type=number]::-webkit-outer-spin-button{-webkit-appearance:none;margin:0}
+.num{text-align:right}
+.line .amt{text-align:right;font-weight:600}
+.line{grid-template-areas:"item qty rate amt rm" "pick pick pick pick pick" "hint hint hint hint hint"}
+.line .i-item{grid-area:item}.line .i-qty{grid-area:qty}.line .i-rate{grid-area:rate}.line .amt{grid-area:amt}.line .rm{grid-area:rm}
+.i-hint{grid-area:hint;display:none;margin-top:-2px;padding-bottom:10px;font-size:12.5px;line-height:1.4;color:var(--muted)}
+.i-hint.show{display:block}
+/* Item list */
+.picker{grid-area:pick;display:none;scroll-margin:96px 0 104px;max-height:264px;overflow-y:auto;overscroll-behavior:contain;-webkit-overflow-scrolling:touch;margin:2px 0 12px;background:var(--sheet);border:1px solid var(--rule-2);border-radius:var(--r-sm);box-shadow:0 10px 26px rgba(23,51,43,.12);scrollbar-width:thin;scrollbar-color:#B9C6BD transparent}
+.picker.show{display:block}
+.picker::-webkit-scrollbar{width:8px}.picker::-webkit-scrollbar-thumb{background:#C5D0C8;border-radius:8px}.picker::-webkit-scrollbar-track{background:transparent}
+.pk-group{position:sticky;top:0;z-index:1;padding:6px 14px;background:#F2F5F1;border-bottom:1px solid var(--rule);font-size:12px;font-weight:600;color:var(--muted)}
+.pk-opt{padding:11px 14px;border-bottom:1px solid #EEF2EE;cursor:pointer;line-height:1.3}
+.pk-opt:last-child{border-bottom:0}
+.pk-opt.on{background:#E6EEE8;box-shadow:inset 3px 0 0 var(--green)}
+.pk-empty{padding:12px 14px;font-size:14px;color:var(--muted)}
+.line .i-rate.auto{color:var(--green-2)}
+/* Rates are fixed on the order screen; only the office changes them when editing */
+.line .i-rate[readonly]{color:var(--green-2);cursor:default}
+.line .i-rate[readonly]:focus{box-shadow:none}
+.line .i-rate[readonly]::placeholder{color:#B7C1BC}
+.line.no-rate .amt{color:var(--muted);font-weight:500}
+.i-hint.warn{color:#8A5A12}
+.rm{border:0;background:transparent;color:var(--muted);width:32px;height:32px;border-radius:50%;display:grid;place-items:center}
+.rm:hover{background:#F6E9E7;color:var(--red)}
+.addline{display:block;width:100%;border:0;background:transparent;color:var(--green-2);font-weight:600;padding:14px;text-align:left}
+.addline:hover{background:#F1F4F0}
+.totalrow{display:flex;justify-content:space-between;align-items:baseline;padding:14px;border-top:1px solid var(--rule);background:#FAFBF8}
+/* Subtotal and discount */
+.sums{border-top:1px solid var(--rule);background:#FAFBF8}
+.subrow{display:none;justify-content:space-between;padding:12px 14px 0;color:var(--muted)}
+.subrow.show{display:flex}
+.discrow{display:flex;align-items:center;gap:12px;padding:10px 14px}
+.discrow label{font-weight:600;color:var(--muted);font-size:14.5px}
+.discin{display:inline-flex;align-items:center;border:1px solid var(--rule-2);border-radius:var(--r-sm);background:var(--sheet);padding-right:10px;color:var(--muted)}
+.discin:focus-within{border-color:var(--green);box-shadow:0 0 0 3px rgba(23,51,43,.1)}
+.discin input{width:68px;border:0;background:transparent;padding:8px 6px 8px 10px;font:inherit;text-align:right;color:var(--ink);-moz-appearance:textfield}
+.discin input:focus{outline:none}
+.discin input::-webkit-inner-spin-button,.discin input::-webkit-outer-spin-button{-webkit-appearance:none;margin:0}
+.discamt{margin-left:auto;font-weight:600;color:var(--red);white-space:nowrap}
+.totalrow b{font-size:21px}
+
+.editing{display:none;justify-content:space-between;align-items:center;gap:12px;background:var(--brass-soft);border-left:3px solid var(--brass);padding:12px 14px;border-radius:0 var(--r-sm) var(--r-sm) 0;margin-bottom:22px}
+.editing.show{display:flex}
+
+.savebar{position:sticky;bottom:0;margin-top:26px;padding:12px 0 calc(14px + env(safe-area-inset-bottom));background:linear-gradient(to top,var(--paper) 72%,rgba(245,246,242,0));display:flex}
+
+/* ===== Buttons ===== */
+.btn{flex:1;border:1.5px solid var(--green);border-radius:var(--r-sm);padding:14px 20px;font-weight:600;font-size:16px;background:var(--green);color:#fff;transition:background .15s,border-color .15s}
+.btn:hover{background:var(--green-2);border-color:var(--green-2)}
+.btn.ghost{background:transparent;color:var(--green);border-color:var(--rule-2)}
+.btn.ghost:hover{border-color:var(--green);background:transparent}
+.btn.danger{background:var(--red);border-color:var(--red)}
+.btn.sm{flex:0 0 auto;padding:10px 18px;font-size:15px}
+.linkbtn{border:0;background:none;padding:6px 0;color:var(--green-2);font-weight:600;text-decoration:underline;text-decoration-color:var(--rule-2);text-underline-offset:4px}
+.linkbtn:hover{text-decoration-color:currentColor}
+.linkbtn.danger{color:var(--red)}
+
+/* ===== PIN lock ===== */
+.lockwrap{max-width:360px;margin:16px auto 0;text-align:center}
+.lockmark{width:58px;height:58px;border-radius:50%;border:1.5px solid var(--brass);color:var(--brass);display:grid;place-items:center;margin:0 auto 18px}
+.dots{display:flex;gap:14px;justify-content:center;margin:26px 0 6px;min-height:14px}
+.dots i{width:13px;height:13px;border-radius:50%;border:1.5px solid var(--green-3);transition:background .12s}
+.dots i.f{background:var(--green);border-color:var(--green)}
+.dots.err{animation:shake .38s}
+@keyframes shake{0%,100%{transform:translateX(0)}20%{transform:translateX(-9px)}40%{transform:translateX(9px)}60%{transform:translateX(-5px)}80%{transform:translateX(5px)}}
+.pinerr{color:var(--red);min-height:22px;margin:6px 0 0;font-size:14.5px}
+.keypad{display:grid;grid-template-columns:repeat(3,74px);gap:14px 22px;justify-content:center;margin-top:18px}
+.key{width:74px;height:74px;border-radius:50%;border:1px solid var(--rule-2);background:var(--sheet);font-size:26px;font-weight:500;color:var(--ink)}
+.key:hover{border-color:var(--green-3)}
+.key{touch-action:manipulation;-webkit-tap-highlight-color:transparent;-webkit-user-select:none;user-select:none;transition:transform .08s,background .08s}
+.key:active,.key.press{background:#E3EBE5;transform:scale(.94)}
+.keypad{touch-action:manipulation}
+.key.txt{font-size:15px;font-weight:600;color:var(--muted);border-color:transparent;background:transparent}
+
+/* ===== Office ledger ===== */
+.ohead{display:flex;justify-content:space-between;align-items:flex-start;gap:12px}
+.ohead .sub{margin-bottom:18px}
+
+/* Filters */
+.tools{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-bottom:16px}
+.search{position:relative;flex:1 1 240px;min-width:0;max-width:380px}
+.search svg{position:absolute;left:14px;top:50%;transform:translateY(-50%);color:var(--muted);pointer-events:none}
+.search input{width:100%;border:1px solid var(--rule-2);background:var(--sheet);border-radius:999px;padding:10px 16px 10px 40px;font:inherit;font-size:15px;color:var(--ink)}
+.search input:focus,.sel:focus{outline:none;border-color:var(--green);box-shadow:0 0 0 3px rgba(23,51,43,.1)}
+.sel{border:1px solid var(--rule-2);border-radius:999px;padding:10px 36px 10px 16px;font:inherit;font-size:15px;color:var(--ink);-webkit-appearance:none;appearance:none;
+  background:var(--sheet) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%2366726C' stroke-width='2.6' stroke-linecap='round'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E") no-repeat right 14px center}
+.pills{display:flex;border:1px solid var(--rule-2);border-radius:999px;padding:3px;background:var(--sheet)}
+.pills button{border:0;background:transparent;border-radius:999px;padding:7px 14px;font-weight:600;font-size:14.5px;color:var(--muted)}
+.pills button[aria-pressed="true"]{background:var(--green);color:#fff}
+.tools .spacer{flex:1 1 0}
+.btn:disabled{opacity:.45;cursor:default}
+
+/* Ledger: cards on phones and tablets, a table on computers */
+.ledger{background:var(--sheet);border:1px solid var(--rule);border-radius:var(--r-md);overflow:hidden}
+.lrow-head{display:none}
+.entry{display:grid;grid-template-columns:60px minmax(0,1fr) auto;grid-template-areas:"m shop amt" "m mm mm" "m acts acts";border-bottom:1px solid var(--rule)}
+.entry:last-child{border-bottom:0}
+.margin{grid-area:m;display:flex;flex-direction:column;align-items:center;padding:16px 0;text-align:center;font-family:var(--serif);font-size:24px;line-height:1.2;color:var(--red);border-right:4px double var(--red-rule)}
+.c-shop{grid-area:shop;padding:16px 12px 0 18px;min-width:0}
+.c-amt{grid-area:amt;padding:17px 18px 0 0;font-weight:700;font-size:18px;white-space:nowrap;text-align:right}
+.c-mm{grid-area:mm;padding:3px 18px 0;color:var(--muted);font-size:14.5px}
+.c-taken,.c-items{display:none}
+.shopname{font-family:var(--serif);font-size:22px;line-height:1.2;overflow-wrap:anywhere}
+.meta{color:var(--muted);font-size:14.5px;margin-top:3px}
+.edited{display:inline-block;margin-left:4px;padding:0 9px;border-radius:999px;background:var(--brass-soft);color:#7A5E28;font-size:12.5px;font-weight:600;vertical-align:1px}
+.edited.needs{background:#F7E2DF;color:var(--red)}
+.dstatus.needs{background:#F7E2DF;color:var(--red);cursor:default}
+.eacts{grid-area:acts;display:flex;flex-wrap:wrap;gap:6px;padding:12px 18px 16px}
+.act{border:1px solid var(--rule-2);background:var(--sheet);border-radius:999px;padding:6px 15px;font-size:14px;font-weight:600;color:var(--green-2)}
+.act:hover{border-color:var(--green)}
+.act.pri{background:var(--green);border-color:var(--green);color:#fff}
+.act.pri:hover{background:var(--green-2)}
+.act.del{color:var(--red)}
+.act.del:hover{border-color:var(--red);background:#FBF1F0}
+.empty{padding:36px 22px;text-align:center}
+.empty p{color:var(--muted);margin:6px auto 0;max-width:340px}
+.ofoot{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-top:20px}
+
+/* Selected-bill panel (computers only) */
+.detail{display:none}
+.dcard{background:var(--sheet);border:1px solid var(--rule);border-radius:var(--r-md);overflow:hidden;box-shadow:0 10px 30px rgba(23,51,43,.07)}
+.dbar{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:12px 14px 12px 18px;border-bottom:1px solid var(--rule);background:#FAFBF8}
+.dtitle{font-weight:600;font-size:14.5px;color:var(--muted)}
+.dacts{display:flex;gap:6px}
+.dscroll{max-height:calc(100vh - 330px);min-height:220px;overflow:auto;padding:26px 24px 30px}
+.dscroll .inv-firm,.dscroll .inv-no b{font-size:24px}
+.dscroll .inv-sign{margin-top:44px}
+.dempty{padding:48px 24px;text-align:center;color:var(--muted)}
+
+@media (min-width:1024px){
+  .owrap{display:grid;grid-template-columns:minmax(0,1fr) 380px;gap:24px;align-items:start}
+  .detail{display:block;position:sticky;top:98px}
+  .lrow-head,.entry{display:grid;grid-template-columns:56px minmax(0,1fr) 168px 60px 124px;grid-template-areas:"m shop taken items amt";align-items:center}
+  .lrow-head{font-size:12.5px;font-weight:600;color:var(--muted);background:#FAFBF8;border-bottom:1px solid var(--rule)}
+  .lrow-head span{padding:10px 12px}
+  .lrow-head span:first-child{text-align:center;align-self:stretch;border-right:4px double var(--red-rule)}
+  .lrow-head .r{text-align:right}
+  .lrow-head span:last-child{padding-right:18px}
+  .entry{cursor:pointer;transition:background .12s}
+  .entry:hover{background:#F7F9F6}
+  .entry.is-sel{background:#ECF2ED}
+  .entry.is-sel .margin{color:var(--red);font-weight:700}
+  .margin{align-self:stretch;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:0;font-size:21px}
+  .c-shop{padding:13px 12px}
+  .shopname{font-size:19px}
+  .meta{font-size:14px;margin-top:1px}
+  .c-taken{display:block;padding:13px 12px;font-size:14.5px;line-height:1.35}
+  .c-taken small{display:block;color:var(--muted);font-size:13.5px}
+  .c-items{display:block;padding:13px 12px;text-align:right;color:var(--muted)}
+  .c-amt{padding:13px 18px 13px 12px;font-size:16.5px}
+  .c-mm,.eacts{display:none}
+}
+@media (min-width:1280px){
+  .owrap{grid-template-columns:minmax(0,1fr) 440px}
+  .dscroll{padding:30px 30px 34px}
+}
+
+/* ===== Office: header, marketer cards, filters, results ===== */
+.ohead-acts{display:flex;gap:8px;flex-wrap:wrap;justify-content:flex-end}
+.withic{display:inline-flex;align-items:center;justify-content:center;gap:8px}
+.withic svg{flex:none}
+.mk-row{display:grid;grid-template-columns:repeat(auto-fill,minmax(178px,1fr));gap:10px;margin:4px 0 18px}
+/* Marketer list in the dialog */
+.mkl{list-style:none;margin:0 0 12px;padding:0;border:1px solid var(--rule);border-radius:var(--r-sm);max-height:260px;overflow:auto}
+.mkl:empty::before{content:'No marketers yet. Add one below.';display:block;padding:12px;color:var(--muted)}
+.mkl li{display:flex;align-items:center;gap:10px;padding:8px 12px;border-bottom:1px solid var(--rule)}
+.mkl li:last-child{border-bottom:0}
+.mkl-name{flex:1;min-width:0;font-weight:500;overflow-wrap:anywhere}
+.mk-av.sm{width:30px;height:30px;font-size:12px}
+.mkl-add{display:flex;gap:8px}
+.mkl-add input{flex:1;min-width:0;border:1px solid var(--rule-2);border-radius:var(--r-sm);padding:10px 12px;font:inherit;color:var(--ink)}
+.mkl-add input:focus{outline:none;border-color:var(--green);box-shadow:0 0 0 3px rgba(23,51,43,.1)}
+.mk{display:flex;align-items:center;gap:12px;text-align:left;border:1px solid var(--rule);background:var(--sheet);border-radius:var(--r-md);padding:12px 14px;min-width:0;transition:border-color .15s,background .15s,box-shadow .15s}
+.mk:hover{border-color:var(--rule-2);box-shadow:0 4px 14px rgba(23,51,43,.06)}
+.mk[aria-pressed="true"]{border-color:var(--green);background:#EFF4F0;box-shadow:inset 0 0 0 .5px var(--green)}
+.mk-av{flex:none;width:38px;height:38px;border-radius:50%;display:grid;place-items:center;background:var(--brass-soft);color:#6E5523;font-weight:700;font-size:13.5px;letter-spacing:.3px}
+.mk-av.all{background:#E4ECE6;color:var(--green-2)}
+.mk[aria-pressed="true"] .mk-av{background:var(--green);color:#F3F1EA}
+.mk-txt{display:flex;flex-direction:column;min-width:0}
+.mk-name{font-size:13.5px;font-weight:600;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.mk-amt{font-weight:700;font-size:17px;line-height:1.25;white-space:nowrap}
+.mk-count{font-size:13px;color:var(--muted)}
+.pills .cnt{display:inline-block;min-width:20px;margin-left:4px;padding:0 6px;border-radius:999px;background:var(--brass-soft);color:#6E5523;font-size:12.5px;line-height:19px;text-align:center}
+.pills button[aria-pressed="true"] .cnt{background:rgba(255,255,255,.2);color:#fff}
+.datepick{border:1px solid var(--rule-2);border-radius:999px;padding:8px 14px;font:inherit;font-size:14.5px;color:var(--ink);background:var(--sheet);min-height:41px}
+.datepick:focus{outline:none;border-color:var(--green);box-shadow:0 0 0 3px rgba(23,51,43,.1)}
+.datepick.on{border-color:var(--green);background:#EFF4F0}
+.results{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin:0 0 12px}
+.rtext{color:var(--muted);font-size:14.5px;margin-right:auto}
+.rtext b{color:var(--ink)}
+.empty .linkbtn{margin-top:10px}
+/* "Did it print?" list after printing several bills */
+.pdl{list-style:none;margin:0 0 4px;padding:0;border:1px solid var(--rule);border-radius:var(--r-sm);max-height:300px;overflow:auto}
+.pdl li{border-bottom:1px solid var(--rule)}
+.pdl li:last-child{border-bottom:0}
+.pdl label{display:flex;align-items:center;gap:10px;padding:9px 12px;cursor:pointer}
+.pdl input{width:18px;height:18px;margin:0;accent-color:var(--green);flex:none}
+.pdl b{font-weight:600;white-space:nowrap}
+.pdl span{min-width:0;color:var(--muted);overflow-wrap:anywhere}
+.mbtns .btn:disabled{opacity:.45;cursor:default}
+
+/* Selected-bill panel extras */
+.dhead{display:flex;align-items:center;gap:10px;min-width:0}
+.dtitle{font-family:var(--serif);font-weight:400;font-size:20px;color:var(--ink)}
+.dstatus{border:0;border-radius:999px;padding:2px 10px;font-size:12.5px;font-weight:600;white-space:nowrap}
+.dnav{display:flex;gap:6px}
+.navbtn{width:32px;height:32px;border-radius:50%;border:1px solid var(--rule-2);background:var(--sheet);display:grid;place-items:center;color:var(--green-2)}
+.navbtn:hover{border-color:var(--green)}
+.navbtn:disabled{opacity:.35;cursor:default}
+.dfoot{display:flex;gap:8px;padding:12px 14px;border-top:1px solid var(--rule);background:#FAFBF8}
+.ddisc{display:flex;align-items:center;gap:10px;padding:10px 14px 10px 18px;border-top:1px solid var(--rule)}
+.ddisc-k{font-weight:600;font-size:14px;color:var(--muted)}
+.ddisc-v{flex:1;min-width:0;font-size:14.5px;color:var(--muted)}
+.ddisc-v.on{color:var(--red);font-weight:600}
+.modal-disc{padding:4px 0 6px}
+.modal-total{padding:12px 0 2px;background:transparent;margin-top:6px}
+.discrow[hidden]{display:none}
+.dfoot .btn{padding:11px 14px;font-size:15px}
+.dfoot .btn.ghost{flex:0 0 auto}
+.dfoot .btn.ghost.del{color:var(--red)}
+.dfoot .btn.ghost.del:hover{border-color:var(--red)}
+.dscroll.roll{background:#ECEFEA}
+.sheet.p-r80,.sheet.p-r58,.sheet.p-a4multi{background:#fff;width:max-content;margin:0 auto;box-shadow:0 4px 16px rgba(0,0,0,.12)}
+
+/* Rates that can be tapped on office previews */
+.ed{cursor:pointer;text-decoration:underline dotted;text-decoration-color:#9a9a9a;text-underline-offset:2px;border-radius:2px}
+.ed:hover,.ed:focus-visible{background:#FFF0B8;outline:none}
+.ed-in{width:5.4em;font:inherit;text-align:right;padding:0 3px;border:1.5px solid var(--green);border-radius:3px;background:#fff;color:#000;-moz-appearance:textfield}
+.ed-in::-webkit-inner-spin-button,.ed-in::-webkit-outer-spin-button{-webkit-appearance:none;margin:0}
+.ed-in:focus{outline:none;box-shadow:0 0 0 3px rgba(23,51,43,.18)}
+.pvtip{display:block;font-family:var(--sans);font-size:12.5px;font-weight:500;opacity:.72;margin-top:2px}
+
+/* ===== Printer settings ===== */
+.pp-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:0 0 14px}
+.pp-opt{position:relative;display:flex;align-items:center;gap:12px;padding:12px;border:1.5px solid var(--rule-2);border-radius:var(--r-sm);cursor:pointer;background:var(--sheet)}
+.pp-opt input{position:absolute;opacity:0;inset:0;margin:0;cursor:pointer}
+.pp-opt:has(input:checked){border-color:var(--green);background:#EFF4F0}
+.pp-opt:has(input:focus-visible){outline:2px solid var(--brass);outline-offset:2px}
+.pp-ic{flex:none;display:block;border:1.5px solid var(--green-3);border-radius:2px;background:#fff}
+.pp-ic.a4{width:22px;height:30px}.pp-ic.a5{width:17px;height:23px}
+.pp-ic.r80{width:13px;height:32px;border-bottom-style:dashed}.pp-ic.r58{width:9px;height:32px;border-bottom-style:dashed}
+.pp-ic.a4multi{width:22px;height:30px;background:linear-gradient(90deg,transparent 31%,var(--green-3) 31%,var(--green-3) 35%,transparent 35%,transparent 65%,var(--green-3) 65%,var(--green-3) 69%,transparent 69%),linear-gradient(transparent 47%,var(--green-3) 47%,var(--green-3) 53%,transparent 53%)}
+.pp-t{display:flex;flex-direction:column;line-height:1.3}
+.pp-t b{font-size:15px}.pp-t small{color:var(--muted);font-size:12.5px}
+.mtext.small{font-size:13px;margin:10px 0 0}
+.mbox.wide{max-width:460px}
+
+/* ===== Receipt layout for thermal roll printers ===== */
+.rcpt{color:#000;font-family:var(--sans);font-size:12px;line-height:1.35;font-variant-numeric:tabular-nums;width:72mm;padding:3mm 3mm 6mm;box-sizing:border-box}
+.p-r58 .rcpt,.pp-r58 .rcpt{width:48mm;font-size:10.5px;padding:2mm 1.5mm 5mm}
+/* "A4, many bills": sheets with 3 columns of compact bills, dashed lines to cut along */
+/* "A4, 4 per sheet": a 2 x 2 grid, one 80 mm-roll-size bill in each quarter, dashed lines to cut along */
+.qpage{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr;width:194mm;height:278mm;box-sizing:border-box}
+.qcell{display:flex;justify-content:center;align-items:flex-start;padding:3mm 0;overflow:hidden;box-sizing:border-box;min-height:0}
+.qcell.l{border-right:.25mm dashed #9AA5A0}
+.qcell.t{border-bottom:.25mm dashed #9AA5A0}
+.qcell .rcpt,.qprobe .rcpt{width:86mm;padding:0}
+.qprobe{width:86mm}
+.qcell .rx-signs,.qprobe .rx-signs{margin-top:7mm;row-gap:6mm}
+.qpage.long{display:block}
+.qpage.long .tiles{height:278mm;column-count:2;column-gap:12mm;column-rule:.25mm dashed #9AA5A0;column-fill:auto}
+.qpage.long .rcpt{width:auto;padding:0}
+.paper.p-a4multi{width:210mm;max-width:none;min-height:297mm;padding:8mm;box-sizing:border-box}
+/* Clean receipt: one table row per item (80 mm roll, 58 mm roll and "A4, many bills" all use it) */
+.rx-title{text-align:center;font-weight:700;font-size:1.25em;letter-spacing:.14em;text-transform:uppercase;padding-bottom:1.2mm;border-bottom:.3mm solid #000;margin-bottom:1.6mm}
+.rx-meta{display:flex;justify-content:space-between;flex-wrap:wrap;gap:0 2mm;font-size:.92em}
+.rx-to{display:flex;flex-direction:column;margin-top:1.6mm}
+.rx-to b{font-size:1.08em}
+.rx-to span{font-size:.92em}
+.rx-items{display:grid;grid-template-columns:minmax(0,1fr) auto auto auto;margin-top:2.2mm}
+.rx-items > span{padding:.9mm 0 .9mm 2.4mm;border-bottom:.1mm solid #cfcfcf;text-align:right;white-space:nowrap}
+.rx-items > .rx-n{padding-left:0;text-align:left;white-space:normal;overflow-wrap:anywhere}
+.rx-items > .rx-h{font-weight:700;font-size:.86em;padding-top:0;border-bottom:.3mm solid #000}
+.rx-items > span:nth-last-child(-n+4){border-bottom:0}
+.rx-at{display:none}
+.rx-sum{display:flex;justify-content:space-between;font-size:.95em;padding-top:.5mm}
+.rx-items + .rx-sum{border-top:.1mm solid #cfcfcf;padding-top:1.2mm}
+.rx-total{display:flex;justify-content:space-between;font-weight:700;font-size:1.18em;border-top:.3mm solid #000;border-bottom:.3mm solid #000;margin-top:1.2mm;padding:1.2mm 0}
+.rx-signs{display:grid;grid-template-columns:auto 1fr;align-items:end;column-gap:2.5mm;row-gap:7mm;margin-top:9mm}
+.rx-signs span{white-space:nowrap}
+.rx-signs i{border-bottom:.2mm solid #000;height:0;margin-bottom:.6mm}
+/* 58 mm roll: no room for a Rate column, so the rate sits under the item name */
+.p-r58 .rx-items,.pp-r58 .rx-items{grid-template-columns:minmax(0,1fr) auto auto}
+.p-r58 .rx-r,.pp-r58 .rx-r{display:none}
+.p-r58 .rx-at,.pp-r58 .rx-at{display:block;font-size:.9em}
+
+/* A5 invoice: same layout, smaller type */
+.p-a5 .inv-firm,.pp-a5 .inv-firm,.p-a5 .inv-no b,.pp-a5 .inv-no b{font-size:22px}
+.p-a5 .inv,.pp-a5 .inv{font-size:13px}
+.p-a5 .inv table,.pp-a5 .inv table{font-size:12.5px;margin-top:16px}
+.p-a5 .inv td,.pp-a5 .inv td{padding:6px 5px}
+.p-a5 .inv-shop,.pp-a5 .inv-shop{font-size:17px}
+.p-a5 .inv-parties,.pp-a5 .inv-parties{font-size:13px}
+.p-a5 .inv-sign,.pp-a5 .inv-sign{margin-top:38px}
+.p-a5 .inv-subs,.pp-a5 .inv-subs{font-size:13px}
+.paper.p-a5{max-width:560px;padding:30px 32px}
+.paper.p-r80,.paper.p-r58{max-width:none;width:max-content;padding:0}
+
+/* ===== Preview window ===== */
+.overlay{display:none;position:fixed;inset:0;background:rgba(16,36,30,.8);z-index:40;overflow:auto;padding:0 12px 40px}
+.overlay.show{display:block}
+.pbar{position:sticky;top:0;z-index:2;background:#13302A;margin:0 -12px 18px;padding:12px;color:#F3F1EA;box-shadow:0 1px 0 rgba(255,255,255,.08)}
+.pbar-in{max-width:760px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap}
+.ptitle{font-family:var(--serif);font-size:20px}
+.pacts{display:flex;gap:8px}
+.pbtn{border:1px solid rgba(255,255,255,.28);background:transparent;color:#F3F1EA;border-radius:999px;padding:8px 18px;font-weight:600;font-size:14.5px}
+.pbtn:hover{border-color:#F3F1EA}
+.pbtn.main{background:#F3F1EA;color:var(--green);border-color:#F3F1EA}
+.paper{background:#fff;max-width:760px;margin:0 auto 18px;padding:44px 48px;box-shadow:0 18px 44px rgba(0,0,0,.35)}
+
+/* ===== Bill (used in preview and print) ===== */
+.inv{color:#1C2421;font-family:var(--sans);font-variant-numeric:tabular-nums}
+.inv-top{display:flex;justify-content:space-between;align-items:flex-start;gap:16px}
+.inv-firm{font-family:var(--serif);font-size:30px;line-height:1.1}
+.inv-addr{color:#5D6964;font-size:13.5px;margin-top:6px;line-height:1.45}
+.inv-no{text-align:right;font-size:13px;color:#5D6964;white-space:nowrap}
+.inv-no b{display:block;font-family:var(--serif);font-weight:400;font-size:30px;line-height:1.1;color:#1C2421}
+.inv-rule{border:0;border-top:4px double #17332B;margin:20px 0 18px}
+.inv-parties{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:14.5px}
+.inv-k{font-size:12.5px;color:#5D6964;font-weight:600;margin-bottom:2px}
+.inv-shop{font-family:var(--serif);font-size:21px;line-height:1.2}
+.inv .ra{text-align:right}
+.inv table{width:100%;border-collapse:collapse;margin-top:24px;font-size:14.5px}
+.inv th{text-align:left;font-size:12.5px;color:#5D6964;font-weight:600;padding:8px 6px;border-bottom:1.5px solid #17332B}
+.inv td{padding:10px 6px;border-bottom:1px solid #DCE3DD}
+.inv th.r,.inv td.r{text-align:right;white-space:nowrap}
+.inv .sn{width:40px;color:#5D6964}
+.inv-total{display:flex;justify-content:flex-end;margin-top:14px}
+.inv-subs{display:flex;flex-direction:column;align-items:flex-end;margin-top:14px;font-size:14.5px}
+.inv-subs div{min-width:240px;display:flex;justify-content:space-between;gap:24px;padding:3px 6px}
+.inv-subs + .inv-total{margin-top:4px}
+.inv-total div{min-width:240px;display:flex;justify-content:space-between;gap:24px;font-size:17px;font-weight:700;padding:6px 6px 8px;border-bottom:4px double #1C2421}
+.inv-sign{display:flex;justify-content:space-between;gap:28px;margin-top:64px;font-size:13px;color:#5D6964}
+.inv-sign div{flex:1;max-width:230px;border-top:1px solid #98A69F;padding-top:6px}
+
+/* ===== Dialog and toast ===== */
+.modal{position:fixed;inset:0;background:rgba(16,36,30,.55);display:none;align-items:center;justify-content:center;padding:16px;z-index:50}
+.modal.show{display:flex}
+.mbox{background:var(--sheet);border-radius:var(--r-md);padding:26px;width:100%;max-width:400px;box-shadow:0 24px 60px rgba(0,0,0,.3)}
+.mbox h2{font-family:var(--serif);font-weight:400;font-size:25px;line-height:1.15;margin:0 0 8px}
+.mtext{color:var(--muted);margin:0 0 18px}
+.merr{color:var(--red);font-size:14px;min-height:20px;margin:0}
+.mbtns{display:flex;gap:10px;margin-top:18px}
+.toast{position:fixed;left:50%;bottom:calc(92px + env(safe-area-inset-bottom));transform:translate(-50%,16px);opacity:0;background:var(--green);color:#fff;padding:12px 20px;border-radius:999px;font-weight:600;box-shadow:0 10px 28px rgba(23,51,43,.28);transition:opacity .22s,transform .22s;z-index:60;pointer-events:none;max-width:calc(100% - 32px);text-align:center}
+.toast.show{opacity:1;transform:translate(-50%,0)}
+.toast.err{background:var(--red)}
+
+/* ===== Tablets and phones: search gets its own line ===== */
+@media (max-width:1023px){
+  .search{flex-basis:100%;max-width:none}
+  .tools .spacer{display:none}
+  .mk-row{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;scroll-padding:0 16px;margin-left:-16px;margin-right:-16px;padding:2px 16px 6px;scrollbar-width:none}
+  .mk-row::-webkit-scrollbar{display:none}
+  .mk{flex:0 0 auto;min-width:168px;scroll-snap-align:start}
+}
+
+/* ===== Phones ===== */
+@media (max-width:560px){
+  main{padding-top:22px}
+  h1{font-size:31px}
+  .brand{font-size:20px}
+  .seg button{padding:7px 13px;font-size:14px}
+  .lhead{display:none}
+  .line{grid-template-columns:1fr 1fr 1fr 32px;grid-template-areas:"item item item rm" "pick pick pick pick" "hint hint hint hint" "qty rate amt amt";column-gap:12px;padding:2px 14px 12px}
+  .i-hint{margin-top:0;padding-bottom:4px}
+  .line .i-item{grid-area:item;font-weight:500}
+  .line .i-qty{grid-area:qty}
+  .line .i-rate{grid-area:rate}
+  .line .i-qty,.line .i-rate{text-align:left;padding:8px 0;border-bottom:1px solid var(--rule)}
+  .line .i-rate[readonly]{border-bottom-color:transparent}
+  .line .amt{grid-area:amt;align-self:end;padding-bottom:8px}
+  .line .rm{grid-area:rm}
+  .entry{grid-template-columns:46px minmax(0,1fr) auto}
+  .margin{font-size:20px}
+  .c-shop{padding:14px 10px 0 14px}
+  .c-amt{padding:15px 14px 0 0;font-size:16.5px}
+  .c-mm{padding:3px 14px 0}
+  .eacts{gap:5px;padding:10px 14px 14px}
+  .shopname{font-size:20px}
+  .act{padding:6px 11px;font-size:13.5px}
+  .results .btn.sm{flex:1 1 0;padding:10px 8px}
+  .rtext{flex-basis:100%}
+  .ohead{flex-wrap:wrap;gap:0}
+  .ohead .sub{margin-bottom:12px}
+  .ohead-acts{width:100%;justify-content:flex-start;margin-bottom:14px}
+  .ohead-acts .btn.sm{padding:9px 14px}
+  .pills button{padding:7px 11px}
+  .datepick{width:138px;padding:8px 10px}
+  .pp-grid{grid-template-columns:1fr}
+  .keypad{grid-template-columns:repeat(3,70px);gap:12px 20px}
+  .key{width:70px;height:70px}
+  .paper{padding:26px 18px}
+  .inv-firm,.inv-no b{font-size:24px}
+}
+@media (prefers-reduced-motion:reduce){*{animation:none !important;transition:none !important}}
+
+/* ===== Printing: only the bills ===== */
+#bill{display:none}
+@media print{
+  body{background:#fff}
+  body > *:not(#bill){display:none !important}
+  #bill{display:block}
+  .inv,.rcpt{break-after:page;page-break-after:always}
+  .inv:last-child,.rcpt:last-child{break-after:auto;page-break-after:auto}
+  .pp-r80,.pp-r58{width:auto}
+  .qpage{break-after:page;page-break-after:always}
+  .qpage:last-child{break-after:auto;page-break-after:auto}
+}
+</style>
+<style id="pageStyle">@page{size:A4;margin:14mm}</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="top-in">
+    <div class="brand"><span id="brandName"></span><small>Orders and bills</small></div>
+    <nav class="seg" aria-label="Sections">
+      <button id="tabOrder" type="button" aria-pressed="true" onclick="goOrder()">Take order</button>
+      <button id="tabOffice" type="button" aria-pressed="false" onclick="openOffice()">
+        <span id="lockIco"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg></span>Office
+      </button>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <!-- ===== Take order (marketers) ===== -->
+  <section id="vOrder" class="view on">
+    <div class="narrow">
+      <div class="editing" id="editNote">
+        <span id="editText"></span>
+        <button class="linkbtn" type="button" onclick="cancelEdit()">Cancel</button>
+      </div>
+      <h1 id="formTitle">New order</h1>
+      <p class="sub" id="formSub">Fill this in at the shop and save it before you leave.</p>
+
+      <div class="group">
+        <span class="lbl">Marketer</span>
+        <div class="chips" id="staffChips" role="radiogroup" aria-label="Marketer"></div>
+      </div>
+
+      <div class="field"><label for="shop">Shop name</label><input id="shop" autocomplete="off" placeholder="Store Name"></div>
+      <p class="hint" id="shopHint" aria-live="polite"></p>
+      <div class="field"><label for="addr">Address</label><input id="addr" autocomplete="off" placeholder="Address Name"></div>
+      <div class="field"><label for="phone">Phone</label><input id="phone" type="tel" inputmode="tel" autocomplete="off" placeholder="98XXXXXXXX"></div>
+
+      <div class="group">
+        <span class="lbl">Items</span>
+        <div class="lines">
+          <div class="lhead"><span>Item</span><span class="num">Qty</span><span class="num">Rate</span><span class="num">Amount</span><span></span></div>
+          <div id="items"></div>
+          <button class="addline" type="button" onclick="addLine()">+ Add line</button>
+          <div class="sums">
+            <div class="subrow" id="subRow"><span>Subtotal</span><span id="fSubtotal">Rs 0</span></div>
+            <div class="discrow" id="discRow" hidden>
+              <label for="disc">Discount</label>
+              <span class="discin"><input id="disc" type="number" inputmode="decimal" min="0" max="100" step="any" placeholder="0" aria-label="Discount in percent"><span aria-hidden="true">%</span></span>
+              <span class="discamt" id="fDiscAmt"></span>
+            </div>
+            <div class="totalrow"><span>Total</span><b id="formTotal">Rs 0</b></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="savebar"><button class="btn" id="saveBtn" type="button" onclick="save()">Save order</button></div>
+    </div>
+  </section>
+
+  <!-- ===== PIN lock ===== -->
+  <section id="vLock" class="view">
+    <div class="lockwrap">
+      <div class="lockmark"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg></div>
+      <h1>Office is locked</h1>
+      <p class="sub" style="margin-bottom:0">Enter the office PIN to see and print bills.</p>
+      <div class="dots" id="dots" aria-hidden="true"></div>
+      <p class="pinerr" id="pinErr" role="alert"></p>
+      <div class="keypad" id="keypad"></div>
+    </div>
+  </section>
+
+  <!-- ===== Office: bills ===== -->
+  <section id="vOffice" class="view">
+    <div class="ohead">
+      <div><h1>Bills</h1><p class="sub" id="todayLine"></p></div>
+      <div class="ohead-acts">
+        <button class="btn ghost sm withic" type="button" onclick="openPrinter()" aria-label="Printer settings">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9V3h12v6"/><rect x="3" y="9" width="18" height="8" rx="2"/><path d="M6 14h12v7H6z"/></svg>
+          <span id="paperLabel">A4 paper</span>
+        </button>
+        <button class="btn ghost sm withic" type="button" onclick="manageMarketers()">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20a6.5 6.5 0 0 1 13 0"/><path d="M16 4.6a3.5 3.5 0 0 1 0 6.8"/><path d="M18.5 14.2A6.5 6.5 0 0 1 21.5 20"/></svg>
+          <span>Marketers</span>
+        </button>
+        <button class="btn ghost sm withic" type="button" onclick="lockOffice()">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>
+          <span>Lock</span>
+        </button>
+      </div>
+    </div>
+
+    <div class="mk-row" id="mkRow" role="group" aria-label="Show bills by marketer"></div>
+
+    <div class="tools" id="tools">
+      <label class="search">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+        <input id="q" type="search" autocomplete="off" placeholder="Search shop, address, phone or bill no." aria-label="Search shop, address, phone or bill number">
+      </label>
+      <div class="pills" id="fDay" role="group" aria-label="Date">
+        <button type="button" data-d="all" aria-pressed="true">All dates</button>
+        <button type="button" data-d="today" aria-pressed="false">Today</button>
+        <button type="button" data-d="yesterday" aria-pressed="false">Yesterday</button>
+      </div>
+      <input type="date" id="fDate" class="datepick" aria-label="Show bills from a date">
+    </div>
+
+    <div class="owrap">
+      <div>
+        <div class="results" id="results">
+          <span class="rtext" id="rtext"></span>
+          <button class="btn ghost sm" id="pvAllBtn" type="button" onclick="previewAll()">Preview</button>
+          <button class="btn sm withic" id="prAllBtn" type="button" onclick="prAll()">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9V3h12v6"/><rect x="3" y="9" width="18" height="8" rx="2"/><path d="M6 14h12v7H6z"/></svg>
+            <span id="prAllText">Print</span>
+          </button>
+        </div>
+        <div class="ledger" id="orders"></div>
+        <div class="ofoot">
+          <button class="linkbtn" type="button" onclick="changePin()">Change PIN</button>
+          <button class="linkbtn danger" type="button" onclick="deleteAll()">Delete all orders</button>
+        </div>
+      </div>
+      <aside class="detail" aria-label="Selected bill">
+        <div class="dcard">
+          <div class="dbar">
+            <div class="dhead"><span class="dtitle" id="dTitle">Bill</span><span class="dstatus needs" id="dNeeds" hidden>Needs rate</span></div>
+            <div class="dnav">
+              <button class="navbtn" id="dPrev" type="button" onclick="stepBill(-1)" aria-label="Previous bill"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M15 6l-6 6 6 6"/></svg></button>
+              <button class="navbtn" id="dNext" type="button" onclick="stepBill(1)" aria-label="Next bill"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></button>
+            </div>
+          </div>
+          <div class="dscroll" id="dBody"></div>
+          <div class="ddisc" id="dDisc">
+            <span class="ddisc-k">Discount</span>
+            <span class="ddisc-v" id="dDiscVal">None</span>
+            <button class="act" type="button" id="dDiscBtn" onclick="discountBill(selId)">Add discount</button>
+          </div>
+          <div class="dfoot" id="dActs">
+            <button class="btn withic" type="button" onclick="pr(selId)">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9V3h12v6"/><rect x="3" y="9" width="18" height="8" rx="2"/><path d="M6 14h12v7H6z"/></svg>
+              Print bill
+            </button>
+            <button class="btn ghost" type="button" onclick="editOrder(selId)">Edit</button>
+            <button class="btn ghost del" type="button" onclick="delOrder(selId)">Delete</button>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </section>
+</main>
+
+<!-- ===== Bill preview ===== -->
+<div class="overlay" id="preview" onclick="if(event.target===this)closePreview()">
+  <div class="pbar"><div class="pbar-in">
+    <div class="ptitle" id="pvTitle"></div>
+    <div class="pacts">
+      <button class="pbtn main" type="button" onclick="printPreview()">Print</button>
+      <button class="pbtn" id="pvDisc" type="button" onclick="discountFromPreview()">Discount</button>
+      <button class="pbtn" id="pvEdit" type="button" onclick="editFromPreview()">Edit</button>
+      <button class="pbtn" type="button" onclick="closePreview()">Close</button>
+    </div>
+  </div></div>
+  <div id="pvBody"></div>
+</div>
+
+<!-- ===== Dialog ===== -->
+<div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="mTitle">
+  <div class="mbox">
+    <h2 id="mTitle"></h2>
+    <div id="mBody"></div>
+    <div class="mbtns">
+      <button class="btn ghost" id="mCancel" type="button">Cancel</button>
+      <button class="btn" id="mOk" type="button">OK</button>
+    </div>
+  </div>
+</div>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<div id="bill"></div>
+
+<script>
+// ===== Your business details: replace with your real name, address and phone =====
+const FIRM = {name:"All Nepal Enterprises Pvt. Ltd.", addr:"Kathmandu, Nepal", phone:""};   // shown only in the app's top bar
+
+// ===== Title printed at the top of every bill (no business name on bills) =====
+const BILL_TITLE = 'Estimate';
+
+// ===== Online shop list =====
+// Shop name, address and phone are saved online, so a shop that orders again fills itself in on every phone.
+// The list is never shown in the app. Where it is saved:
+//   - Web hosting with PHP (cPanel, Hostinger and most paid hosting): upload shops.php next to this file and keep 'shops.php'.
+//   - Hosting without PHP (GitHub Pages, Netlify, Vercel...): set up shops-google.gs and paste its web app address here.
+//   - '' : no online saving; shops are remembered on this device only.
+const SHOP_SYNC_URL = 'shops.php';
+const SHOP_SYNC_KEY = 'ane-Vj4mbN6iHEkQamzB';    // must be the same in shops.php / shops-google.gs
+
+// ===== Marketers: starting list; more can be added from the app =====
+const DEFAULT_STAFF = ['Anju Tamang','Shova','Anita Thapa','Laxman'];
+const STAFF_LIST_KEY = 'marketers';
+const cleanName = s => String(s || '').trim().replace(/\s+/g, ' ');
+function loadStaff(){
+  try {
+    const v = JSON.parse(localStorage.getItem(STAFF_LIST_KEY) || 'null');
+    if(Array.isArray(v)) return v.map(cleanName).filter(Boolean);
+  } catch(e) {}
+  return DEFAULT_STAFF.slice();
+}
+let STAFF = loadStaff();
+
+// ===== Price list =====
+// Each item: c = company, n = name printed on the bill, r = rate, u = what the rate is for, note = extra info
+// Change a rate here and it is used for every new order.
+const PRICE_LIST = [
+  // ---- Tokla Tea: rate is per kg, for every pack size ----
+  ...[
+    ['Tokla Box (T.B.)',         ['50 g','100 g','200 g','500 g','1 kg'], 540],
+    ['Tokla Pouch (T.P.)',       ['500 g','1000 g'],                              510],
+    ['Tokla Jar (T.Jar)',        ['200 g','500 g','1000 g'],                      556],
+    ['Tokla Masala Box (TMB)',   ['100 g','200 g','500 g'],                       575],
+    ['Tokla Masala Pouch (TMP)', ['50 g','100 g','200 g','500 g','1000 g'],       550],
+    ['Tokla Gold Box (TGB)',     ['100 g','200 g','500 g'],                       568],
+    ['Tokla Gold Pouch',         ['500 g','1000 g'],                              531],
+    ['Tokla Tea Bag (TT Bag)',   ['200 g','1000 g'],                              760],
+  ].flatMap(([name, sizes, r]) => sizes.map(size => ({c:'Tokla Tea', n:`${name} ${size}`, r, u:'kg'}))),
+  {c:'Tokla Tea', n:'Tokla RS 20 (10 pack)', r:545, u:'kg', note:'3 pack = 1 kg'},
+  {c:'Tokla Tea', n:'T.G.L. Tea Bag 37.5 g',  r:115, u:'pkt'},
+  {c:'Tokla Tea', n:'Green Tea 37.5 g',       r:105, u:'pkt'},
+  {c:'Tokla Tea', n:'T. Green Tea 100 g',     r:177, u:'pkt'},
+  {c:'Tokla Tea', n:'T. Green Tea 200 g',     r:214, u:'pkt'},
+
+  // ---- Wonder Clean: rate = "After scheme" price per piece ----
+  // [name, size, pieces per carton, MRP NRS, rate]
+  ...[
+    ['Toilet Cleaner',       '500 ml',  36, 176,    121.97],
+    ['Toilet Cleaner',       '750 ml',  18, 209.6,  160.34],
+    ['Toilet Cleaner',       '5000 ml',  4, 1200,   918],
+    ['Glass Cleaner',        '500 ml',  36, 176,    134.64],
+    ['Glass Cleaner',        '5000 ml',  4, 1200,   918],
+    ['Dishwash Liquid',      '250 ml',  48, 112,    85.68],
+    ['Dishwash Liquid',      '500 ml',  36, 211.2,  161.57],
+    ['Dishwash Liquid',      '750 ml',  20, 320,    244.8],
+    ['Dishwash Liquid',      '1000 ml', 20, 369.6,  282.74],
+    ['Dishwash Liquid',      '5000 ml',  4, 1600,   1224],
+    ['FC (Rose + White)',    '500 ml',  36, 121.6,  98.5],
+    ['FC (Rose + White)',    '1000 ml', 20, 209.6,  160.34],
+    ['FC (Rose + White)',    '5000 ml',  4, 878.4,  671.98],
+    ['Urinal Cubes',         '100 g',  160, 112,    75.6],
+    ['Urinal Cubes',         '140 g',   96, 160,    122.4],
+    ['Urinal Cubes',         '300 g',   48, 320,    244.8],
+    ['Drainmax',             '50 g',   288, 48,     41.04],
+    ['Flushmate',            '100 g',   96, 200,    153],
+    ['Air Freshner',         '50 g',   240, 80,     61.2],
+    ['Air Pocket',           '10 g',   240, 104,    70.2],
+    ['N/B (White + Colour)', '100 g',  200, 80,     61.2],
+    ['N/B (White + Colour)', '250 g',   80, 176,    134.64],
+    ['N/B (White + Colour)', '500 g',   40, 336,    257.04],
+    ['Surface (3V)',         '500 ml',  36, 160,    129.6],
+    ['Surface (3V)',         '1000 ml', 20, 304,    246.24],
+    ['Surface (3V)',         '5000 ml',  4, 1200,   918],
+    ['Handwash (2V)',        '500 ml',  36, 256,    207.36],
+    ['Handwash (2V)',        '750 ml',  24, 256,    156.67],
+    ['Handwash (2V)',        '5000 ml',  4, 1600,   1224],
+    ['Green Phynel',         '500 ml',  36, 264,    225.72],
+    ['Green Phynel',         '1000 ml', 20, 480,    410.4],
+    ['Detergent Liquid',     '2000 ml',  6, 928,    749.36],
+  ].map(([name, size, ctn, mrp, r]) => ({c:'Wonder Clean', n:`${name} ${size}`, r, u:'pc', mrp, note:`Carton of ${ctn}`})),
+
+  // ---- Softy Hygiene: [item, quantity, rate, remarks] ----
+  ...[
+    ['Softy 320/50',  '24 pcs', 385],
+    ['Softy 320/15',  '72 pcs', 137],
+    ['Softy 320/10',  '48 pcs', 84],
+    ['Softy 320/8',   '36 pcs', 100],
+    ['Softy 320/6',   '78 pcs', 54],
+    ['Softy 290/55',  '24 pcs', 385],
+    ['Softy 290/10',  '54 pcs', 77],
+    ['Softy 290/8',   '36 pcs', 92],
+    ['Softy 290/6',   '90 pcs', 46],
+    ['Softy 260/10',  '72 pcs', 72],
+    ['Softy 260/6',   '96 pcs', 42],
+    ['Pocket Wipes',  '168 pcs', 22],
+    ['ICY Cool Wipes','70 pcs', 34],
+    ['Travel Wipes',  '72 pcs', 40],
+    ['Makeup Wipes',  '72 pcs', 54],
+    ['Softy Baby Pants M5, L4, XL4, S56',    '60 pcs', 69],
+    ['Softy Baby Pants M50, L42, XL34, S56', '8 pkt', 730],
+    ['Panty Liner 180 mm', '120 pcs', 108],
+    ['Panty Liner 155 mm', '120 pcs', 72],
+    ['Adult Diaper L10',   '12 pkt', 470],
+    ['Adult Diaper M10',   '12 pkt', 430],
+    ['Sensitive',          '30 pcs', 68],
+    ['Cotton Swab',        '12 pcs', 73, '1 pcs'],
+    ['RSR 100 g TP',       '10 pkt', 400],
+    ['RSR 140 g TP',       '10 pkt', 500],
+    ['Pop Up',             '144 pcs', 20, 'Ctn = 18'],
+    ['Softy 350/10',       '48 pkt', 125],
+    ['Softy 350/30',       '24 pkt', 350],
+    ['PL 180/40',          '60 pcs', 195],
+    ['Minimi New Born 24', '12 pkt', 470],
+    ['Minimi S, M, L, XL', '12 pkt', 850],
+    ['Coolin',             '',       137],
+  ].map(([n, qty, r, rem]) => ({c:'Softy Hygiene', n, r, u: /pkt/i.test(qty) ? 'pkt' : 'pc',
+                                note:[qty && `Quantity ${qty}`, rem].filter(Boolean).join(', ')})),
+];
+const normName = s => String(s || '').trim().replace(/\s+/g, ' ').toLowerCase();
+const PRODUCT_MAP = new Map(PRICE_LIST.map(p => [normName(p.n), p]));
+// ===== New items typed by hand: remembered and listed under "Other items" =====
+const CUSTOM_KEY = 'custom_items';
+let CUSTOM = [];                                   // [{n, r, u}]
+const allItems = () => [...PRICE_LIST, ...CUSTOM.map(p => ({c:'Other items', ...p}))];
+const findProduct = name => {
+  const k = normName(name);
+  return PRODUCT_MAP.get(k) || allItems().find(p => normName(p.n) === k) || null;
+};
+function loadCustom(){
+  try { CUSTOM = JSON.parse(localStorage.getItem(CUSTOM_KEY) || '[]').filter(p => p && p.n); } catch(e) { CUSTOM = []; }
+}
+// Adds any item that is not on the price list; keeps the latest rate and unit used
+function rememberItems(items){
+  let changed = false;
+  items.forEach(i => {
+    const name = String(i.n || '').trim().replace(/\s+/g, ' '), key = normName(name);
+    if(!key || PRODUCT_MAP.has(key)) return;        // already on the price list
+    const old = CUSTOM.find(p => normName(p.n) === key);
+    if(!old){ CUSTOM.push({n:name, r:i.r || 0, u:i.u || ''}); changed = true; }
+    else if((i.r && old.r !== i.r) || (i.u && old.u !== i.u)){ if(i.r) old.r = i.r; if(i.u) old.u = i.u; changed = true; }
+  });
+  if(changed){
+    CUSTOM.sort((a,b) => a.n.localeCompare(b.n));
+    try { localStorage.setItem(CUSTOM_KEY, JSON.stringify(CUSTOM)); } catch(e) {}
+  }
+}
+
+// ===== Office PIN: starts as 1111, change it from the office side =====
+const DEFAULT_PIN = '1111';
+
+const PIN_KEY = 'office_pin', KEY = 'orders_en', STAFF_KEY = 'last_staff', CLEAN_KEY = 'examples_removed_v1';
+const EXAMPLE_STAFF = ['Ramesh','Suresh','Hari','Bikash'];   // only used to clear old test data
+let unlocked = false, editingId = null, previewIds = [], pinBuf = '';
+let selId = null;                                    // bill shown in the side panel (computers)
+const filt = {q:'', staff:'', day:'all', date:''};   // office filters
+const wide = () => window.matchMedia('(min-width:1024px)').matches;
+const $ = id => document.getElementById(id);
+
+// ===== Helpers =====
+const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const money = n => {
+  const v = Math.round((Number(n) || 0) * 100) / 100;
+  return v.toLocaleString('en-IN', Number.isInteger(v) ? {} : {minimumFractionDigits:2, maximumFractionDigits:2});
+};
+const fmtTime = t => new Date(t).toLocaleString('en-IN', {day:'numeric', month:'short', year:'numeric', hour:'numeric', minute:'2-digit'});
+const when = x => x.ts ? fmtTime(x.ts) : (x.id > 1e12 ? fmtTime(x.id) : x.date);
+// Short date for the computer table: "17 Nov, 1:53 pm" (year shown only if not this year)
+const whenShort = x => {
+  const t = x.ts || (x.id > 1e12 ? x.id : null); if(!t) return x.date;
+  const d = new Date(t), sameYear = d.getFullYear() === new Date().getFullYear();
+  return d.toLocaleString('en-IN', {day:'numeric', month:'short', ...(sameYear ? {} : {year:'numeric'}), hour:'numeric', minute:'2-digit'});
+};
+const subTot = o => o.items.reduce((s,x) => s + x.q * x.r, 0);                // before discount
+const discPct = o => Math.min(100, Math.max(0, +o.disc || 0));                   // discount in %
+const discAmt = o => Math.round(subTot(o) * discPct(o)) / 100;                  // discount in Rs
+const tot = o => Math.round((subTot(o) - discAmt(o)) * 100) / 100;              // amount to pay
+const pctText = p => String(+(+p).toFixed(2));
+const needsRate = o => o.items.some(i => !(+i.r > 0));                   // an item still without a rate
+
+function load(k){ try { return localStorage.getItem(k); } catch(e) { return null; } }
+function store(k, v){ try { localStorage.setItem(k, v); return true; } catch(e) { return false; } }
+const raw = () => load(KEY);
+function get(){ try { return JSON.parse(raw() || '[]'); } catch(e) { return []; } }
+const put = o => store(KEY, JSON.stringify(o));
+const sorted = () => get().sort((a,b) => a.billNo - b.billNo);
+
+let toastTimer;
+function toast(msg, err){
+  const t = $('toast');
+  t.textContent = msg;
+  t.className = 'toast show' + (err ? ' err' : '');
+  clearTimeout(toastTimer);
+  toastTimer = setTimeout(() => { t.className = 'toast' + (err ? ' err' : ''); }, 2600);
+}
+
+function scrollLock(on){ document.body.style.overflow = on ? 'hidden' : ''; }
+
+// ===== Dialog (confirm / change PIN) =====
+function openModal({title, body, ok='OK', cancel='Cancel', danger=false, focusCancel=false, onOk}){
+  return new Promise(resolve => {
+    const okB = $('mOk'), cB = $('mCancel');
+    $('mTitle').textContent = title;
+    $('mBody').innerHTML = body;
+    okB.textContent = ok; okB.disabled = false;
+    cB.textContent = cancel;
+    okB.className = 'btn' + (danger ? ' danger' : '');
+    const key = e => {
+      if(e.key === 'Escape') close(false);
+      if(e.key === 'Enter' && e.target.tagName === 'INPUT') okB.click();
+    };
+    function close(v){
+      $('modal').classList.remove('show');
+      okB.onclick = cB.onclick = null;
+      document.removeEventListener('keydown', key);
+      if(!$('preview').classList.contains('show')) scrollLock(false);
+      resolve(v);
+    }
+    okB.onclick = () => { if(!onOk || onOk() !== false) close(true); };
+    cB.onclick = () => close(false);
+    document.addEventListener('keydown', key);
+    $('modal').classList.add('show');
+    scrollLock(true);
+    setTimeout(() => (focusCancel ? cB : $('mBody').querySelector('input') || okB).focus(), 30);
+  });
+}
+const ask = (title, text, ok, danger) => openModal({title, body:`<p class="mtext">${esc(text)}</p>`, ok, danger});
+
+// ===== Views =====
+function show(v){
+  ['vOrder','vLock','vOffice'].forEach(id => $(id).classList.toggle('on', id === v));
+  $('tabOrder').setAttribute('aria-pressed', v === 'vOrder');
+  $('tabOffice').setAttribute('aria-pressed', v !== 'vOrder');
+  window.scrollTo(0,0);
+}
+function goOrder(){ show('vOrder'); }
+function openOffice(){
+  if(unlocked){ show('vOffice'); list(); return; }
+  pinBuf = ''; drawDots(); $('pinErr').textContent = '';
+  show('vLock');
+}
+
+// ===== PIN lock =====
+function getPin(){ return load(PIN_KEY) || DEFAULT_PIN; }
+
+function renderKeypad(){
+  const keys = ['1','2','3','4','5','6','7','8','9','C','0','B'];
+  $('keypad').innerHTML = keys.map(k => {
+    const label = k === 'C' ? 'Clear' : k === 'B' ? 'Delete last digit' : k;
+    const text = k === 'C' ? 'Clear' : k === 'B' ? '⌫' : k;
+    return `<button type="button" class="key${k === 'C' || k === 'B' ? ' txt' : ''}" data-k="${k}" aria-label="${label}">${text}</button>`;
+  }).join('');
+  $('keypad').onclick = e => {
+    const b = e.target.closest('[data-k]'); if(!b) return;
+    b.classList.add('press'); setTimeout(() => b.classList.remove('press'), 120);
+    try { if(navigator.vibrate) navigator.vibrate(8); } catch(err) {}      // small buzz on Android phones
+    pinKey(b.dataset.k);
+  };
+}
+
+function drawDots(){
+  const n = Math.max(4, pinBuf.length);
+  $('dots').innerHTML = Array.from({length:n}, (_,i) => `<i class="${i < pinBuf.length ? 'f' : ''}"></i>`).join('');
+}
+
+function pinKey(k){
+  if(k === 'C') pinBuf = '';
+  else if(k === 'B') pinBuf = pinBuf.slice(0, -1);
+  else if(pinBuf.length < 8) pinBuf += k;
+  $('pinErr').textContent = '';
+  drawDots();
+  if(pinBuf.length && pinBuf.length === getPin().length) setTimeout(tryUnlock, 140);
+}
+
+function tryUnlock(){
+  if(!$('vLock').classList.contains('on')) return;
+  if(pinBuf === getPin()){
+    unlocked = true; pinBuf = '';
+    $('lockIco').style.display = 'none';
+    show('vOffice'); list();
+  } else if(pinBuf.length){
+    pinBuf = ''; drawDots();
+    $('pinErr').textContent = 'That PIN is not right. Try again.';
+    const d = $('dots'); d.classList.remove('err'); void d.offsetWidth; d.classList.add('err');
+  }
+}
+
+function lockOffice(){
+  unlocked = false;
+  closePreview();
+  if(editingId !== null) clearForm();
+  $('orders').innerHTML = ''; $('dBody').innerHTML = '';
+  $('lockIco').style.display = '';
+  show('vOrder');
+  toast('Office locked');
+}
+
+function changePin(){
+  if(!unlocked) return;
+  openModal({
+    title:'Change office PIN',
+    ok:'Save PIN',
+    body:`<p class="mtext">Use 4 to 8 digits. The new PIN is saved on this device only.</p>
+      <div class="field"><label for="np1">New PIN</label><input id="np1" type="password" inputmode="numeric" autocomplete="new-password"></div>
+      <div class="field"><label for="np2">Type it again</label><input id="np2" type="password" inputmode="numeric" autocomplete="new-password"></div>
+      <p class="merr" id="merr"></p>`,
+    onOk(){
+      const a = $('np1').value.trim(), b = $('np2').value.trim();
+      if(!/^\d{4,8}$/.test(a)){ $('merr').textContent = 'Use 4 to 8 digits, numbers only.'; return false; }
+      if(a !== b){ $('merr').textContent = 'The two PINs are different. Type them again.'; return false; }
+      if(!store(PIN_KEY, a)){ $('merr').textContent = 'This device could not save the PIN.'; return false; }
+      return true;
+    }
+  }).then(ok => { if(ok) toast('PIN changed'); });
+}
+
+// ===== Order form =====
+let editExtra = '';                               // marketer of a bill being edited who is no longer on the list
+function renderStaff(){
+  const cur = getStaff();
+  const names = STAFF.slice();
+  if(editExtra && !names.includes(editExtra)) names.push(editExtra);
+  $('staffChips').innerHTML = names.map(s =>
+    `<label><input type="radio" name="staff" value="${esc(s)}"><span>${esc(s)}</span></label>`).join('') +
+    `<button type="button" class="chip-add" onclick="addMarketer()">+ Add marketer</button>`;
+  $('staffChips').onchange = () => { if(editingId === null) store(STAFF_KEY, getStaff()); };
+  if(cur) setStaff(cur);
+}
+
+function saveStaff(list){ STAFF = list; store(STAFF_LIST_KEY, JSON.stringify(list)); }
+function nameProblem(n, list){
+  if(!n) return 'Type a name.';
+  if(n.length > 40) return 'Keep the name under 40 letters.';
+  if(list.some(x => x.toLowerCase() === n.toLowerCase())) return `${n} is already on the list.`;
+  return '';
+}
+
+// "+ Add marketer" on the order screen
+function addMarketer(){
+  let added = '';
+  openModal({
+    title:'Add a marketer',
+    ok:'Add',
+    body:`<p class="mtext">The name appears on the order screen and on bills.</p>
+      <div class="field"><label for="mkName">Name</label><input id="mkName" autocomplete="off" maxlength="40" placeholder="Full name"></div>
+      <p class="merr" id="merr"></p>`,
+    onOk(){
+      const n = cleanName($('mkName').value), err = nameProblem(n, STAFF);
+      if(err){ $('merr').textContent = err; return false; }
+      saveStaff([...STAFF, n]); added = n; return true;
+    }
+  }).then(ok => {
+    if(!ok) return;
+    renderStaff(); setStaff(added);
+    if(editingId === null) store(STAFF_KEY, added);
+    if(unlocked) list();
+    toast(`${added} added`);
+  });
+}
+
+// "Marketers" card on the office side: add or remove names
+function manageMarketers(){
+  if(!unlocked) return;
+  const draft = STAFF.slice();
+  const draw = () => {
+    $('mkList').innerHTML = draft.map((s,i) => `<li><span class="mk-av sm" aria-hidden="true">${esc(initials(s))}</span>
+      <span class="mkl-name">${esc(s)}</span>
+      <button type="button" class="linkbtn danger" data-i="${i}" aria-label="Remove ${esc(s)}">Remove</button></li>`).join('');
+  };
+  const addTyped = () => {
+    const n = cleanName($('mkName').value); if(!n) return true;
+    const err = nameProblem(n, draft);
+    if(err){ $('merr').textContent = err; return false; }
+    draft.push(n); $('mkName').value = ''; $('merr').textContent = ''; draw();
+    return true;
+  };
+  openModal({
+    title:'Marketers',
+    ok:'Save',
+    body:`<p class="mtext">These are the names marketers pick on the order screen. Removing a name keeps that marketer's old bills.</p>
+      <ul class="mkl" id="mkList"></ul>
+      <div class="mkl-add"><input id="mkName" autocomplete="off" maxlength="40" placeholder="New marketer name" aria-label="New marketer name">
+        <button type="button" class="btn sm" id="mkAddBtn">Add</button></div>
+      <p class="merr" id="merr"></p>`,
+    onOk(){
+      if(!addTyped()) return false;
+      if(!draft.length){ $('merr').textContent = 'Keep at least one marketer.'; return false; }
+      saveStaff(draft.slice()); return true;
+    }
+  }).then(ok => {
+    if(!ok) return;
+    if(filt.staff && !STAFF.includes(filt.staff)) filt.staff = '';
+    renderStaff();
+    if(!getStaff() && editingId === null){ const last = load(STAFF_KEY); setStaff(STAFF.includes(last) ? last : STAFF[0]); }
+    list();
+    toast('Marketer list saved');
+  });
+  draw();
+  $('mkList').onclick = e => { const b = e.target.closest('[data-i]'); if(!b) return; draft.splice(+b.dataset.i, 1); $('merr').textContent = ''; draw(); };
+  $('mkAddBtn').onclick = () => { addTyped(); $('mkName').focus(); };
+  $('mkName').onkeydown = e => { if(e.key === 'Enter'){ e.preventDefault(); e.stopPropagation(); addTyped(); } };
+}
+function getStaff(){ const c = document.querySelector('input[name=staff]:checked'); return c ? c.value : ''; }
+function setStaff(v){ document.querySelectorAll('input[name=staff]').forEach(r => r.checked = r.value === v); }
+
+function addItem(n='', q='', r='', u=''){
+  const d = document.createElement('div'); d.className = 'line'; d.dataset.u = u;
+  d.innerHTML = `<input class="i-item" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="picker"
+      autocomplete="off" placeholder="Search item or type a new one" value="${esc(n)}" aria-label="Item">
+    <input class="i-qty num" type="number" inputmode="decimal" min="0" step="any" placeholder="${u ? `Qty (${esc(u)})` : 'Qty'}" value="${esc(q)}" aria-label="Quantity">
+    <input class="i-rate num" type="number" inputmode="decimal" min="0" step="any" placeholder="Rate" value="${esc(r)}" aria-label="Rate">
+    <span class="amt">—</span>
+    <button class="rm" type="button" aria-label="Remove this line"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+    <div class="i-hint"></div>`;
+  d.querySelector('.rm').onclick = () => {
+    if(pick.line === d) closePicker();
+    d.remove(); if(!$('items').children.length) addItem(); recalc();
+  };
+  const item = d.querySelector('.i-item'), rate = d.querySelector('.i-rate');
+  item.addEventListener('focus', () => openPicker(d));
+  item.addEventListener('input', () => { openPicker(d); pickProduct(d, false); });
+  item.addEventListener('change', () => pickProduct(d, true));
+  item.addEventListener('keydown', e => pickerKeys(d, e));
+  rate.addEventListener('input', () => {                                 // a typed rate is kept (office only)
+    rate.classList.remove('auto');
+    const ok = +rate.value > 0;
+    d.classList.toggle('no-rate', !ok && !!item.value.trim());
+    showHint(d, findProduct(item.value), ok ? '' : 'Add the rate for this item.');
+  });
+  const p = findProduct(n);                                              // lines loaded for editing
+  if(p){
+    if(!u) d.dataset.u = p.u;
+    if(r !== '' && +r === p.r) rate.classList.add('auto');
+    showHint(d, p);
+  }
+  lockRate(d);
+  $('items').appendChild(d);
+  recalc();
+  return d;
+}
+
+// The rate box can only be typed in when the office is editing a bill
+const ratesLocked = () => editingId === null;
+function lockRate(line){
+  const rate = line.querySelector('.i-rate'), locked = ratesLocked();
+  rate.readOnly = locked;
+  rate.tabIndex = locked ? -1 : 0;
+  rate.placeholder = locked ? '—' : 'Rate';
+  rate.title = locked ? 'Rates come from the price list. The office can change them.' : '';
+  if(locked) pickProduct(line, false, true);
+  else if(line.querySelector('.i-item').value.trim() && !(+rate.value > 0))
+    showHint(line, findProduct(line.querySelector('.i-item').value), 'Add the rate for this item.');
+  line.classList.toggle('no-rate', !(+rate.value > 0) && !!line.querySelector('.i-item').value.trim());
+}
+function lockAllRates(){ document.querySelectorAll('#items .line').forEach(lockRate); recalc(); }
+
+// When an item from the price list is chosen: fill its rate and unit
+function pickProduct(line, commit, quiet){
+  const item = line.querySelector('.i-item'), rate = line.querySelector('.i-rate'), qty = line.querySelector('.i-qty');
+  const p = findProduct(item.value), locked = ratesLocked();
+  if(!p){
+    if(locked || rate.classList.contains('auto')){ rate.value = ''; rate.classList.remove('auto'); }
+    line.dataset.u = ''; qty.placeholder = 'Qty';
+    showHint(line, null, locked && item.value.trim() && (commit || quiet) ? 'New item. The office will add the rate.' : '');   // shown once typing is done
+  } else {
+    if(commit) item.value = p.n;                                         // same spelling as the price list
+    if(locked){ rate.value = p.r || ''; rate.classList.toggle('auto', !!p.r); }   // order screen: always the list rate
+    else if(p.r && (!rate.value || rate.classList.contains('auto'))){ rate.value = p.r; rate.classList.add('auto'); }
+    line.dataset.u = p.u || ''; qty.placeholder = p.u ? `Qty (${p.u})` : 'Qty';
+    showHint(line, p, locked && !p.r ? 'No rate yet. The office will add it.' : '');
+  }
+  line.classList.toggle('no-rate', !(+rate.value > 0) && !!item.value.trim());
+  if(!quiet) recalc();
+}
+
+// Small line under the item: company, what the rate is for, pack size (no prices)
+function showHint(line, p, warn = ''){
+  const h = line.querySelector('.i-hint');
+  const base = p ? `${p.c}${p.u ? `, rate per ${p.u}` : ''}${p.note ? '. ' + p.note : ''}` : '';
+  const text = [base, warn].filter(Boolean).join('. ');
+  h.textContent = text;
+  h.classList.toggle('show', !!text);
+  h.classList.toggle('warn', !!warn);
+}
+
+// ===== Item list: names only, scrollable, filters as you type =====
+const pick = {line:null, list:[], active:-1};
+const pickerEl = document.createElement('div');
+pickerEl.className = 'picker'; pickerEl.id = 'picker'; pickerEl.setAttribute('role', 'listbox'); pickerEl.setAttribute('aria-label', 'Items');
+
+function openPicker(line){
+  const wasOpen = pick.line === line && pickerEl.classList.contains('show');
+  if(pick.line !== line){
+    if(pick.line) pick.line.querySelector('.i-item').setAttribute('aria-expanded', 'false');
+    pick.line = line;
+    line.appendChild(pickerEl);
+  }
+  renderPicker();
+  pickerEl.classList.add('show');
+  line.querySelector('.i-item').setAttribute('aria-expanded', 'true');
+  // Keep the open list clear of the floating Save button
+  if(!wasOpen) requestAnimationFrame(() => pickerEl.scrollIntoView({block:'nearest'}));
+}
+
+function closePicker(){
+  if(!pick.line) return;
+  const item = pick.line.querySelector('.i-item');
+  item.setAttribute('aria-expanded', 'false'); item.removeAttribute('aria-activedescendant');
+  pickerEl.classList.remove('show'); pickerEl.remove();
+  pick.line = null; pick.list = []; pick.active = -1;
+}
+
+function renderPicker(){
+  const q = normName(pick.line.querySelector('.i-item').value);
+  const words = q.split(' ').filter(Boolean);
+  pick.list = allItems().filter(p => {
+    const text = normName(`${p.n} ${p.c}`);
+    return words.every(w => text.includes(w));
+  });
+  pick.active = words.length && pick.list.length ? 0 : -1;
+  if(!pick.list.length){
+    pickerEl.innerHTML = '<div class="pk-empty">Not on the price list. It will be saved as a new item.</div>';
+  } else {
+    let html = '', group = '';
+    pick.list.forEach((p, i) => {
+      if(p.c !== group){ group = p.c; html += `<div class="pk-group" aria-hidden="true">${esc(group)}</div>`; }
+      html += `<div class="pk-opt${i === pick.active ? ' on' : ''}" role="option" id="pk-${i}" data-i="${i}" aria-selected="${i === pick.active}">${esc(p.n)}</div>`;
+    });
+    pickerEl.innerHTML = html;
+  }
+  pickerEl.scrollTop = 0;
+  setActive(pick.active, false);
+}
+
+function setActive(i, scroll){
+  pick.active = i;
+  pickerEl.querySelectorAll('.pk-opt').forEach(o => {
+    const on = +o.dataset.i === i;
+    o.classList.toggle('on', on); o.setAttribute('aria-selected', on);
+  });
+  const item = pick.line && pick.line.querySelector('.i-item');
+  if(item){ if(i >= 0) item.setAttribute('aria-activedescendant', `pk-${i}`); else item.removeAttribute('aria-activedescendant'); }
+  if(scroll && i >= 0){
+    const o = pickerEl.querySelector(`#pk-${i}`), head = 30;
+    if(o.offsetTop - head < pickerEl.scrollTop) pickerEl.scrollTop = o.offsetTop - head;
+    else if(o.offsetTop + o.offsetHeight > pickerEl.scrollTop + pickerEl.clientHeight) pickerEl.scrollTop = o.offsetTop + o.offsetHeight - pickerEl.clientHeight;
+  }
+}
+
+function choosePick(i){
+  const p = pick.list[i], line = pick.line; if(!p || !line) return;
+  line.querySelector('.i-item').value = p.n;
+  closePicker();
+  pickProduct(line, true);
+  line.querySelector('.i-qty').focus();                                  // next: type the quantity
+}
+
+function pickerKeys(line, e){
+  if(e.key === 'ArrowDown' || e.key === 'ArrowUp'){
+    e.preventDefault();
+    if(pick.line !== line) openPicker(line);
+    if(!pick.list.length) return;
+    const n = pick.list.length;
+    const next = pick.active < 0 ? (e.key === 'ArrowDown' ? 0 : n - 1) : (pick.active + (e.key === 'ArrowDown' ? 1 : -1) + n) % n;
+    setActive(next, true);
+  } else if(e.key === 'Enter'){
+    if(pick.line === line && pick.active >= 0){ e.preventDefault(); choosePick(pick.active); }
+  } else if(e.key === 'Escape'){
+    if(pick.line === line){ e.preventDefault(); e.stopPropagation(); closePicker(); }
+  } else if(e.key === 'Tab'){
+    closePicker();
+  }
+}
+
+pickerEl.addEventListener('click', e => { const o = e.target.closest('.pk-opt'); if(o) choosePick(+o.dataset.i); });
+pickerEl.addEventListener('mousemove', e => { const o = e.target.closest('.pk-opt'); if(o && +o.dataset.i !== pick.active) setActive(+o.dataset.i, false); });
+// Close when tapping or moving focus anywhere else
+const outsidePicker = t => pick.line && !pickerEl.contains(t) && t !== pick.line.querySelector('.i-item');
+// (closed only after the tap finishes, so buttons below the list don't move under the finger)
+let pointerIsDown = false;
+document.addEventListener('pointerdown', e => {
+  pointerIsDown = true;
+  if(!outsidePicker(e.target)) return;
+  const lineAtTap = pick.line;
+  const finish = () => {
+    document.removeEventListener('pointerup', finish, true);
+    document.removeEventListener('pointercancel', finish, true);
+    setTimeout(() => { if(pick.line === lineAtTap) closePicker(); }, 0);
+  };
+  document.addEventListener('pointerup', finish, true);
+  document.addEventListener('pointercancel', finish, true);
+}, true);
+const pointerReleased = () => { pointerIsDown = false; };
+document.addEventListener('pointerup', pointerReleased, true);
+document.addEventListener('pointercancel', pointerReleased, true);
+document.addEventListener('focusin', e => { if(!pointerIsDown && outsidePicker(e.target)) closePicker(); });
+
+function addLine(){ addItem().querySelector('.i-item').focus(); }
+
+function recalc(){
+  let t = 0;
+  document.querySelectorAll('#items .line').forEach(l => {
+    const a = (+l.querySelector('.i-qty').value || 0) * (+l.querySelector('.i-rate').value || 0);
+    t += a;
+    l.querySelector('.amt').textContent = a ? money(a) : '—';
+  });
+  const o = {items:[{q:1, r:t}], disc:+$('disc').value || 0};
+  const pct = discPct(o);
+  $('subRow').classList.toggle('show', pct > 0);
+  $('fSubtotal').textContent = 'Rs ' + money(t);
+  $('fDiscAmt').textContent = pct > 0 ? `− Rs ${money(discAmt(o))}` : '';
+  $('formTotal').textContent = 'Rs ' + money(tot(o));
+}
+
+// ===== Shop list: name, address and phone of every shop (never items) =====
+// Never shown in the app. It is only used to fill in a shop that orders again.
+// Kept tiny: each shop is [name, address, phone, time of last change in seconds].
+// One copy stays on this device (works without internet), one online (shared by every phone).
+const DETAILS = ['addr','phone'];
+const DIR_KEY = 'shop_list', DIR_V_KEY = 'shop_list_v', DIR_QUEUE_KEY = 'shop_list_unsent', DIR_SEED_KEY = 'shop_list_seeded';
+// Same shop when the letters and numbers match: "Ram Kirana", "ram  kirana." and "Ram-Kirana" are one shop
+const shopKey = s => String(s || '').toLowerCase().replace(/[^\p{L}\p{M}\p{N}]+/gu, '');
+const cleanText = (s, max) => String(s ?? '').trim().replace(/\s+/g, ' ').slice(0, max);
+const nowSec = () => Math.floor(Date.now() / 1000);
+let DIR = new Map();                                   // shopKey -> [name, addr, phone, t]
+
+function readJSON(k, fallback){ try { const v = JSON.parse(load(k)); return v == null ? fallback : v; } catch(e) { return fallback; } }
+function setDir(rows){
+  DIR = new Map();
+  (Array.isArray(rows) ? rows : []).forEach(r => {
+    if(Array.isArray(r) && shopKey(r[0])) DIR.set(shopKey(r[0]), [cleanText(r[0], 80), cleanText(r[1], 120), cleanText(r[2], 30), +r[3] || 0]);
+  });
+}
+const saveDir = () => store(DIR_KEY, JSON.stringify([...DIR.values()]));
+
+// Adds or updates one shop. Newer details win; an empty box never wipes a known address or phone.
+function mergeShop(row){
+  const n = cleanText(row[0], 80), k = shopKey(n); if(!k) return false;
+  const a = cleanText(row[1], 120), p = cleanText(row[2], 30), t = +row[3] || 0;
+  const old = DIR.get(k);
+  const next = !old ? [n, a, p, t]
+    : t >= old[3] ? [n, a || old[1], p || old[2], t]
+    : [old[0], old[1] || a, old[2] || p, old[3]];
+  if(old && next[0] === old[0] && next[1] === old[1] && next[2] === old[2]) return false;   // nothing new
+  DIR.set(k, next); return true;
+}
+const shopRow = (x, t) => [x.shop, x.addr || '', x.phone || '', t];
+
+// Shops waiting to go online (saved without internet, or before the first sync)
+function queueShops(rows){
+  const q = new Map(readJSON(DIR_QUEUE_KEY, []).map(r => [shopKey(r[0]), r]));
+  rows.forEach(r => { if(r) q.set(shopKey(r[0]), r); });
+  store(DIR_QUEUE_KEY, JSON.stringify([...q.values()]));
+}
+
+// An order was saved or a bill edited: remember the shop and send it online
+function rememberShop(x){
+  if(mergeShop(shopRow(x, nowSec()))){ saveDir(); queueShops([DIR.get(shopKey(x.shop))]); }
+  syncShops();
+}
+
+// First start of this version: copy the shops from bills already on this device into the shop list
+function seedShops(orders){
+  if(load(DIR_SEED_KEY)) return;
+  const changed = new Set();
+  orders.map(x => [x, Math.floor((x.editedTs || stampOf(x) || Date.now()) / 1000)])
+    .sort((a, b) => a[1] - b[1])
+    .forEach(([x, t]) => { if(mergeShop(shopRow(x, t))) changed.add(shopKey(x.shop)); });
+  saveDir();
+  queueShops([...changed].map(k => DIR.get(k)));
+  store(DIR_SEED_KEY, '1');
+}
+
+// Sends waiting shops online and brings back the latest list. One small request;
+// the full list comes back only when it changed online (v = version of the online list).
+let syncBusy = false, syncAgain = false, lastSync = 0;
+async function syncShops(){
+  if(!SHOP_SYNC_URL) return;
+  if(syncBusy){ syncAgain = true; return; }
+  syncBusy = true; lastSync = Date.now();
+  const sent = readJSON(DIR_QUEUE_KEY, []);
+  const ctl = window.AbortController ? new AbortController() : null;
+  const timer = ctl && setTimeout(() => ctl.abort(), 20000);
+  try {
+    const res = await fetch(SHOP_SYNC_URL, {method:'POST', cache:'no-store', signal:ctl && ctl.signal,
+      body:JSON.stringify({key:SHOP_SYNC_KEY, v:load(DIR_V_KEY) || '', shops:sent})});
+    const j = await res.json();
+    if(!j || !j.ok) throw new Error('not saved online');
+    const done = new Set(sent.map(r => JSON.stringify(r)));          // saved online: take them off the waiting list
+    const left = readJSON(DIR_QUEUE_KEY, []).filter(r => !done.has(JSON.stringify(r)));
+    store(DIR_QUEUE_KEY, JSON.stringify(left));
+    if(Array.isArray(j.shops)){                                       // online list changed: use it, plus anything not sent yet
+      setDir(j.shops);
+      left.forEach(mergeShop);
+      if(saveDir() && j.v) store(DIR_V_KEY, String(j.v));
+      if($('vOrder').classList.contains('on') && $('shop').value.trim()) autofillShop();
+    }
+  } catch(e) {
+    // No internet, or the save script is not set up: shops stay on this device and go online next time
+  } finally {
+    if(timer) clearTimeout(timer);
+    syncBusy = false;
+    if(syncAgain){ syncAgain = false; syncShops(); }
+  }
+}
+
+// Details for a shop name, or null if it is a new shop
+function shopProfile(name){
+  const r = DIR.get(shopKey(name));
+  return r ? {shop:r[0], addr:r[1], phone:r[2]} : null;
+}
+
+function clearAutofill(){
+  DETAILS.forEach(f => { const el = $(f); if(el.classList.contains('auto')){ el.value = ''; el.classList.remove('auto'); } });
+  $('shopHint').classList.remove('show');
+}
+
+// Runs as the shop name is typed
+function autofillShop(e){
+  const p = shopProfile($('shop').value);
+  if(!p){ clearAutofill(); return; }
+  if(e && e.type === 'change') $('shop').value = p.shop;   // keep the name spelled the same as before
+  let filled = 0;
+  DETAILS.forEach(f => {
+    const el = $(f);
+    if(p[f] && (!el.value.trim() || el.classList.contains('auto'))){ el.value = p[f]; el.classList.add('auto'); filled++; }
+  });
+  if(filled){
+    $('shopHint').innerHTML = `Saved details for ${esc(p.shop)} filled in. <button type="button" onclick="undoAutofill()">Clear</button>`;
+    $('shopHint').classList.add('show');
+  }
+}
+function undoAutofill(){ clearAutofill(); $('addr').focus(); }
+
+function readForm(){
+  const locked = ratesLocked();
+  const items = [...document.querySelectorAll('#items .line')].map(l => {
+    const n = l.querySelector('.i-item').value.trim(), p = findProduct(n);
+    return {
+      n,
+      q: +l.querySelector('.i-qty').value || 0,
+      r: locked ? (p ? +p.r || 0 : 0) : (+l.querySelector('.i-rate').value || 0),   // marketers can't change rates
+      u: l.dataset.u || ''
+    };
+  }).filter(x => x.n && x.q > 0);
+  return {staff:getStaff(), shop:$('shop').value.trim().replace(/\s+/g, ' '),
+          addr:$('addr').value.trim(), phone:$('phone').value.trim(), items,
+          disc: editingId !== null ? (+$('disc').value || 0) : 0};   // discount is set by the office only
+}
+
+function clearForm(){
+  ['shop', ...DETAILS].forEach(i => { $(i).value = ''; $(i).classList.remove('auto'); });
+  $('shopHint').classList.remove('show');
+  closePicker();
+  $('items').innerHTML = ''; addItem();
+  $('disc').value = ''; $('discRow').hidden = true;
+  editingId = null;
+  lockAllRates();
+  recalc();
+  if(editExtra){ editExtra = ''; renderStaff(); }
+  $('editNote').classList.remove('show');
+  $('formTitle').textContent = 'New order';
+  $('formSub').textContent = 'Fill this in at the shop and save it before you leave.';
+  $('saveBtn').textContent = 'Save order';
+  const last = load(STAFF_KEY);
+  setStaff(STAFF.includes(last) ? last : STAFF[0]);
+}
+
+function save(){
+  const d = readForm();
+  if(!d.staff){ toast('Choose the marketer first', true); return; }
+  if(!d.shop){ toast('Add the shop name', true); $('shop').focus(); return; }
+  if(!d.items.length){ toast('Add at least one item with a quantity', true); return; }
+  if(d.disc < 0 || d.disc > 100){ toast('Discount must be between 0 and 100%', true); $('disc').focus(); return; }
+  rememberItems(d.items);                          // new items go into the item list
+  const o = get();
+
+  if(editingId !== null){                         // Updating a bill (office only)
+    if(!unlocked){ clearForm(); return; }
+    const id = editingId, i = o.findIndex(x => x.id === id);
+    if(i < 0){ toast('This bill no longer exists', true); clearForm(); return; }
+    o[i] = {...o[i], ...d, edited:true, editedTs:Date.now()};
+    if(!put(o)){ toast('This device could not save the change', true); return; }
+    rememberShop(o[i]);                            // corrected address or phone goes into the shop list
+    const no = o[i].billNo;
+    clearForm(); selId = id; show('vOffice'); list();
+    if(!wide()) preview(id);                       // phones: show the updated bill straight away
+    toast(`Bill ${no} updated`);
+    return;
+  }
+
+  const known = shopProfile(d.shop);               // New order: same spelling as earlier bills
+  if(known) d.shop = known.shop;
+  const now = Date.now();
+  const billNo = o.reduce((m,x) => Math.max(m, x.billNo || 0), 0) + 1;
+  o.push({id:now, ts:now, billNo, date:new Date(now).toLocaleString(), ...d});
+  if(!put(o)){ toast('This device could not save the order', true); return; }
+  rememberShop(d);                                 // shop list: name, address, phone (online too)
+  toast(`Saved as bill ${billNo} for ${d.shop}`);
+  clearForm();
+}
+
+// ===== Office actions (all need the office unlocked) =====
+function editOrder(id){
+  if(!unlocked) return;
+  const x = get().find(o => o.id === id); if(!x) return;
+  editingId = id;
+  editExtra = STAFF.includes(x.staff) ? '' : x.staff;
+  renderStaff();
+  setStaff(x.staff);
+  $('shop').value = x.shop; DETAILS.forEach(f => { $(f).value = x[f] || ''; $(f).classList.remove('auto'); });
+  $('shopHint').classList.remove('show');
+  $('items').innerHTML = '';
+  x.items.forEach(i => addItem(i.n, i.q, +i.r > 0 ? i.r : '', i.u || ''));   // a missing rate shows as an empty box
+  lockAllRates();
+  $('disc').value = discPct(x) || ''; $('discRow').hidden = false; recalc();
+  $('formTitle').textContent = `Edit bill ${x.billNo}`;
+  $('formSub').textContent = 'Change anything below, then update the bill.';
+  $('editText').textContent = `You are editing bill ${x.billNo} for ${x.shop}.`;
+  $('editNote').classList.add('show');
+  $('saveBtn').textContent = 'Update bill';
+  show('vOrder');
+}
+
+function cancelEdit(){ clearForm(); if(unlocked){ show('vOffice'); list(); } }
+
+async function delOrder(id){
+  if(!unlocked) return;
+  const x = get().find(v => v.id === id); if(!x) return;
+  const ok = await ask(`Delete bill ${x.billNo}?`, `The order for ${x.shop} will be removed. This cannot be undone.`, 'Delete bill', true);
+  if(!ok) return;
+  const shown = filtered(), i = shown.findIndex(v => v.id === id);
+  const next = shown[i + 1] || shown[i - 1];
+  put(get().filter(v => v.id !== id));
+  if(selId === id) selId = next ? next.id : null;
+  list();
+  toast(`Bill ${x.billNo} deleted`);
+}
+
+async function deleteAll(){
+  if(!unlocked) return;
+  const n = get().length; if(!n){ toast('There are no orders to delete'); return; }
+  const ok = await ask('Delete all orders?', `All ${n} bills on this device will be removed. This cannot be undone. Saved shop details are kept.`, 'Delete all', true);
+  if(!ok) return;
+  put([]); list();
+  toast('All orders deleted');
+}
+
+// ===== Office ledger =====
+// Filters: search, marketer, date (all / today / yesterday / a picked day)
+function stampOf(x){ return x.ts || (x.id > 1e12 ? x.id : null); }
+const pad2 = n => String(n).padStart(2, '0');
+const dayKey = d => `${d.getFullYear()}-${pad2(d.getMonth() + 1)}-${pad2(d.getDate())}`;
+function dayOf(x){ const t = stampOf(x); return t ? dayKey(new Date(t)) : ''; }
+function isToday(x){ return dayOf(x) === dayKey(new Date()); }
+function wantedDay(){
+  const now = new Date();
+  if(filt.day === 'today') return dayKey(now);
+  if(filt.day === 'yesterday') return dayKey(new Date(now.getFullYear(), now.getMonth(), now.getDate() - 1));
+  if(filt.day === 'date') return filt.date;
+  return '';
+}
+function matches(x, ignoreStaff){
+  const q = filt.q.trim().toLowerCase(), day = wantedDay();
+  return (ignoreStaff || !filt.staff || x.staff === filt.staff) &&
+    (!day || dayOf(x) === day) &&
+    (!q || `${x.shop} ${x.addr || ''} ${x.phone || ''} ${x.billNo}`.toLowerCase().includes(q));
+}
+function filtered(){ return sorted().filter(x => matches(x, false)); }
+
+const ICON_BOOK = '<svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h11a3 3 0 0 1 3 3v13H8a3 3 0 0 1-3-3z"/><path d="M5 17a3 3 0 0 1 3-3h11"/></svg>';
+const initials = s => s.trim().split(/\s+/).map(w => w[0]).join('').slice(0, 2).toUpperCase();
+const billsWord = n => `${n} ${n === 1 ? 'bill' : 'bills'}`;
+
+// Marketer cards: each shows its total for the current date and search, and filters when tapped
+function renderCards(){
+  const base = sorted().filter(x => matches(x, true));
+  const card = (key, name, list, avatar) => {
+    const on = filt.staff === key;
+    return `<button type="button" class="mk" data-s="${esc(key)}" aria-pressed="${on}">
+      ${avatar}
+      <span class="mk-txt"><span class="mk-name">${esc(name)}</span>
+        <span class="mk-amt">Rs ${money(list.reduce((s,x) => s + tot(x), 0))}</span>
+        <span class="mk-count">${billsWord(list.length)}</span></span>
+    </button>`;
+  };
+  $('mkRow').innerHTML = card('', 'All marketers', base, `<span class="mk-av all">${ICON_BOOK}</span>`) +
+    STAFF.map(s => card(s, s, base.filter(x => x.staff === s), `<span class="mk-av">${esc(initials(s))}</span>`)).join('');
+}
+
+function syncFilterButtons(){
+  $('fDay').querySelectorAll('button').forEach(b => b.setAttribute('aria-pressed', filt.day === b.dataset.d));
+  $('fDate').value = filt.day === 'date' ? filt.date : '';
+  $('fDate').classList.toggle('on', filt.day === 'date');
+  $('q').value = filt.q;
+}
+function clearFilters(){ Object.assign(filt, {q:'', staff:'', day:'all', date:''}); syncFilterButtons(); list(); }
+
+function list(){
+  if(!unlocked) return;
+  const all = get(), o = filtered();
+  const has = all.length > 0;
+  $('todayLine').textContent = new Date().toLocaleDateString('en-IN', {weekday:'long', day:'numeric', month:'long', year:'numeric'});
+  ['mkRow','tools','results'].forEach(id => $(id).style.display = has ? '' : 'none');
+  renderCards();
+
+  const sum = o.reduce((s,x) => s + tot(x), 0);
+  $('rtext').innerHTML = o.length === all.length
+    ? `<b>${billsWord(o.length)}</b>, Rs ${money(sum)} in total`
+    : `Showing <b>${o.length}</b> of ${billsWord(all.length)}, Rs ${money(sum)}`;
+  $('pvAllBtn').textContent = `Preview (${o.length})`;
+  $('prAllText').textContent = `Print (${o.length})`;
+  $('pvAllBtn').disabled = $('prAllBtn').disabled = !o.length;
+
+  if(!o.some(x => x.id === selId)) selId = o.length ? o[0].id : null;
+
+  const head = `<div class="lrow-head" aria-hidden="true"><span>No.</span><span>Shop</span><span>Taken by</span><span class="r">Items</span><span class="r">Amount</span></div>`;
+  if(!has){
+    $('orders').innerHTML = `<div class="empty"><div class="shopname">No bills waiting</div>
+      <p>Orders the marketers save on the Take order screen show up here, one bill per shop. A bill is removed once you confirm it printed.</p></div>`;
+  } else if(!o.length){
+    $('orders').innerHTML = head + `<div class="empty"><div class="shopname">No matching bills</div>
+      <p>Nothing matches this search, marketer or date.</p>
+      <button class="linkbtn" type="button" onclick="clearFilters()">Clear filters</button></div>`;
+  } else {
+    $('orders').innerHTML = head + o.map(x => {
+      const who = [x.addr, x.phone].filter(Boolean).map(esc).join(', ');
+      const n = x.items.length;
+      const badge = (needsRate(x) ? '<span class="edited needs">Needs rate</span>' : '') + (x.edited ? '<span class="edited">Edited</span>' : '');
+      return `<article class="entry${x.id === selId ? ' is-sel' : ''}" data-id="${x.id}" tabindex="0"
+          aria-label="Bill ${x.billNo}, ${esc(x.shop)}, Rs ${money(tot(x))}">
+        <div class="margin" title="Bill number"><span>${x.billNo}</span></div>
+        <div class="c-shop"><div class="shopname">${esc(x.shop)}</div>${who || badge ? `<div class="meta">${who}${badge}</div>` : ''}</div>
+        <div class="c-taken">${esc(x.staff)}<small>${esc(whenShort(x))}</small></div>
+        <div class="c-items">${n}</div>
+        <div class="c-amt">Rs ${money(tot(x))}</div>
+        <div class="c-mm">Taken by ${esc(x.staff)}, ${esc(when(x))}. ${n} ${n === 1 ? 'item' : 'items'}.${needsRate(x) ? ' <span class="edited needs">Needs rate</span>' : ''}</div>
+        <div class="eacts">
+          <button class="act" type="button" onclick="preview(${x.id})">Preview</button>
+          <button class="act" type="button" onclick="pr(${x.id})">Print</button>
+          <button class="act" type="button" onclick="editOrder(${x.id})">Edit</button>
+          <button class="act del" type="button" onclick="delOrder(${x.id})">Delete</button>
+        </div>
+      </article>`;
+    }).join('');
+  }
+  renderDetail();
+}
+
+// After a rate is changed on a preview: redraw the list, the side panel and the open preview
+function refreshAfterRateEdit(){
+  list();
+  if($('preview').classList.contains('show')) showPreview(sorted().filter(x => previewIds.includes(x.id)));
+}
+
+// Side panel on computers: the selected bill, laid out for the chosen paper
+function renderDetail(){
+  const x = get().find(o => o.id === selId);
+  const paper = getPaper();
+  $('dActs').style.display = x ? '' : 'none';
+  $('dDisc').style.display = x ? '' : 'none';
+  if(!x) $('dNeeds').hidden = true;
+  $('dBody').classList.toggle('roll', isCompact(paper));
+  const o = filtered(), i = x ? o.findIndex(v => v.id === x.id) : -1;
+  $('dPrev').disabled = i <= 0; $('dNext').disabled = i < 0 || i >= o.length - 1;
+  if(!x){
+    $('dTitle').textContent = 'Bill';
+    $('dBody').innerHTML = '<div class="dempty">Select a bill on the left to see it here.</div>';
+    return;
+  }
+  $('dTitle').textContent = `Bill ${x.billNo}`;
+  $('dNeeds').hidden = !needsRate(x);
+  $('dBody').innerHTML = `<div class="sheet p-${paper}">${billHTML(x, paper, true)}</div>`;
+  $('dBody').scrollTop = 0;
+  const pct = discPct(x);
+  $('dDiscVal').textContent = pct ? `${pctText(pct)}%, − Rs ${money(discAmt(x))}` : 'None';
+  $('dDiscVal').classList.toggle('on', pct > 0);
+  $('dDiscBtn').textContent = pct ? 'Change' : 'Add discount';
+}
+
+// ===== Discount (office only) =====
+function discountBill(id){
+  if(!unlocked) return;
+  const x = get().find(o => o.id === id); if(!x) return;
+  const sub = subTot(x);
+  openModal({
+    title:`Discount for bill ${x.billNo}`,
+    ok:'Save',
+    body:`<p class="mtext">${esc(x.shop)}. Subtotal Rs ${money(sub)}.</p>
+      <div class="discrow modal-disc"><label for="mDisc">Discount</label>
+        <span class="discin"><input id="mDisc" type="number" inputmode="decimal" min="0" max="100" step="any" placeholder="0" value="${discPct(x) || ''}" aria-label="Discount in percent"><span aria-hidden="true">%</span></span>
+        <span class="discamt" id="mDiscAmt"></span></div>
+      <div class="totalrow modal-total"><span>Total</span><b id="mDiscTotal"></b></div>
+      <p class="merr" id="merr"></p>`,
+    onOk(){
+      const v = +$('mDisc').value || 0;
+      if(v < 0 || v > 100){ $('merr').textContent = 'Discount must be between 0 and 100%.'; return false; }
+      const o = get(), b = o.find(v2 => v2.id === id); if(!b) return true;
+      if((+b.disc || 0) !== v){ b.disc = v; b.editedTs = Date.now(); put(o); }
+      return true;
+    }
+  }).then(ok => {
+    if(!ok) return;
+    const b = get().find(o => o.id === id); if(!b) return;
+    list();
+    if(previewIds.length) showPreview(sorted().filter(v => previewIds.includes(v.id)));
+    toast(discPct(b) ? `Bill ${b.billNo}: ${pctText(discPct(b))}% off, total Rs ${money(tot(b))}` : `Bill ${b.billNo}: no discount`);
+  });
+  const upd = () => {
+    const v = +$('mDisc').value || 0, t = {items:[{q:1, r:sub}], disc:v};
+    $('mDiscAmt').textContent = discPct(t) ? `− Rs ${money(discAmt(t))}` : '';
+    $('mDiscTotal').textContent = 'Rs ' + money(tot(t));
+    $('merr').textContent = v < 0 || v > 100 ? 'Discount must be between 0 and 100%.' : '';
+  };
+  $('mDisc').addEventListener('input', upd); upd();
+  setTimeout(() => $('mDisc').select(), 40);
+}
+function discountFromPreview(){ if(previewIds.length === 1) discountBill(previewIds[0]); }
+
+function selectBill(id){
+  selId = id;
+  document.querySelectorAll('#orders .entry').forEach(e => e.classList.toggle('is-sel', +e.dataset.id === id));
+  renderDetail();
+}
+
+function stepBill(dir){
+  const o = filtered(); if(!o.length) return;
+  const i = o.findIndex(x => x.id === selId);
+  const j = Math.min(o.length - 1, Math.max(0, i + dir));
+  selectBill(o[j].id);
+  const row = document.querySelector(`#orders .entry[data-id="${o[j].id}"]`);
+  if(row) row.scrollIntoView({block:'nearest'});
+  return row;
+}
+
+// Click a row: computers select it, phones open the preview
+function onLedgerClick(e){
+  if(e.target.closest('button')) return;
+  const row = e.target.closest('.entry'); if(!row) return;
+  const id = +row.dataset.id;
+  if(wide()) selectBill(id); else preview(id);
+}
+
+// ===== Paper sizes and printer settings =====
+const PAPERS = {
+  a4multi: {name:'A4, 4 per sheet', label:'A4, 4 per sheet', desc:'Up to 4 bills on each sheet, cut into quarters', page:'@page{size:A4;margin:8mm}'},
+  a4:  {name:'A4, one bill',  label:'A4 paper',    desc:'One full-size bill per sheet', page:'@page{size:A4;margin:14mm}'},
+  a5:  {name:'A5',         label:'A5 paper',    desc:'Half of an A4 sheet',   page:'@page{size:A5;margin:9mm}'},
+  r80: {name:'80 mm roll', label:'80 mm roll',  desc:'Thermal receipt printer', page:'@page{margin:0}'},
+  r58: {name:'58 mm roll', label:'58 mm roll',  desc:'Small thermal printer', page:'@page{margin:0}'},
+};
+const PAPER_KEY = 'paper_size';
+function getPaper(){ const p = load(PAPER_KEY); return PAPERS[p] ? p : 'a4multi'; }
+const isRoll = p => p === 'r80' || p === 'r58';
+const isCompact = p => isRoll(p) || p === 'a4multi';             // narrow receipt-style bill
+function updatePaperLabel(){ $('paperLabel').textContent = PAPERS[getPaper()].label; }
+
+function openPrinter(){
+  if(!unlocked) return;
+  const cur = getPaper();
+  const opt = k => `<label class="pp-opt"><input type="radio" name="paper" value="${k}"${k === cur ? ' checked' : ''}>
+      <span class="pp-ic ${k}" aria-hidden="true"></span><span class="pp-t"><b>${PAPERS[k].name}</b><small>${PAPERS[k].desc}</small></span></label>`;
+  $('modal').querySelector('.mbox').classList.add('wide');
+  openModal({
+    title:'Printer settings',
+    ok:'Save',
+    body:`<p class="mtext">Choose the paper your printer uses and bills will be laid out for it. You pick the printer itself in the print window that opens.</p>
+      <div class="pp-grid" role="radiogroup" aria-label="Paper size">${Object.keys(PAPERS).map(opt).join('')}</div>
+      <button type="button" class="linkbtn" id="testPrintBtn">Print a test page</button>
+      <p class="mtext small">This is saved on this device only. Set it on each computer or phone that prints.</p>`,
+    onOk(){ const v = document.querySelector('input[name=paper]:checked'); if(v) store(PAPER_KEY, v.value); return true; }
+  }).then(ok => {
+    $('modal').querySelector('.mbox').classList.remove('wide');
+    if(ok){ updatePaperLabel(); renderDetail(); toast(`Bills will print on ${PAPERS[getPaper()].label}`); }
+  });
+  $('testPrintBtn').onclick = () => {
+    const v = document.querySelector('input[name=paper]:checked');
+    const paper = v ? v.value : cur;
+    printBills(paper === 'a4multi' ? Array.from({length:4}, testBill) : [testBill()], paper, false);
+  };
+}
+
+const testBill = () => ({id:0, billNo:'Test', ts:Date.now(), staff:'Test page', shop:'Test print (not a real bill)', addr:'', phone:'',
+  items:[{n:'Toilet Cleaner 500 ml', q:2, r:121.97, u:'pc'}, {n:'Tokla Box (T.B.) 100 g', q:1, r:540, u:'kg'}, {n:'Softy 320/10', q:12, r:84, u:'pc'}]});
+
+// ===== Bill layouts =====
+// edit = rates can be tapped and changed (office previews only, never on paper)
+function billHTML(x, paper = getPaper(), edit = false){ return isCompact(paper) ? receiptHTML(x, paper === 'a4multi', edit) : invoiceHTML(x, edit); }
+// All the bills for one print job; on "A4, many bills" they are packed onto sheets
+function printHTML(bills, paper){
+  return paper === 'a4multi' ? packSheets(bills).join('') : bills.map(x => billHTML(x, paper)).join('');
+}
+
+// "A4, 4 per sheet": each sheet has 4 places (cells 0 = left top, 1 = left bottom, 2 = right top, 3 = right bottom).
+// A bill that fits a quarter takes one place; a longer one takes a whole half of the sheet (top and bottom);
+// a very long one gets a sheet of its own. So a sheet never holds more than 4 bills. Returns one HTML block per sheet.
+const MM = 96 / 25.4;                           // CSS pixels in one millimetre
+const QPAGE_MM = 278, QSLOT_MM = QPAGE_MM / 2, QPAD_MM = 6.5;   // A4 height minus 8 mm margins (with room to spare); 3 mm padding top and bottom
+function packSheets(bills, edit = false){
+  const probe = document.createElement('div');
+  probe.className = 'qprobe';
+  probe.style.cssText = 'position:absolute;left:-10000px;top:0;visibility:hidden';
+  document.body.appendChild(probe);
+  const blocks = bills.map(x => {
+    probe.innerHTML = receiptHTML(x, true, edit);
+    const h = probe.firstElementChild.getBoundingClientRect().height / MM + QPAD_MM;
+    return {html: probe.innerHTML, slots: h <= QSLOT_MM ? 1 : h <= QPAGE_MM ? 2 : 0};
+  });
+  probe.remove();
+
+  const sheets = [];                             // [{long, html} | {cells:[4 places]}]
+  const place = (sh, b) => {
+    if(b.slots === 1){ const i = [0, 2, 1, 3].find(c => !sh.cells[c]); if(i == null) return false; sh.cells[i] = {html:b.html, span:1}; return true; }   // left to right, then top to bottom
+    for(const c of [0, 2]) if(!sh.cells[c] && !sh.cells[c + 1]){ sh.cells[c] = {html:b.html, span:2}; sh.cells[c + 1] = 'used'; return true; }
+    return false;
+  };
+  blocks.forEach(b => {
+    if(!b.slots){ sheets.push({long:true, html:b.html}); return; }
+    if(sheets.some(sh => !sh.long && place(sh, b))) return;
+    const sh = {cells:[null, null, null, null]}; sheets.push(sh); place(sh, b);
+  });
+  return sheets.map(sh => sh.long
+    ? `<div class="qpage long"><div class="tiles">${sh.html}</div></div>`
+    : `<div class="qpage">${sh.cells.map((c, i) => {
+        if(c === 'used') return '';
+        const tall = c && c.span === 2;
+        const cls = `qcell ${i < 2 ? 'l' : 'r'}${i % 2 === 0 && !tall ? ' t' : ''}`;
+        return `<div class="${cls}" style="grid-column:${i < 2 ? 1 : 2};grid-row:${i % 2 + 1}${tall ? ' / span 2' : ''}">${c ? c.html : ''}</div>`;
+      }).join('')}</div>`);
+}
+
+// A rate that can be tapped in office previews
+const rateCell = (tag, cls, k, r, edit) => `<${tag} class="${cls}${edit ? ' ed' : ''}"${edit ? ` data-i="${k}" tabindex="0" title="Change rate"` : ''}>${money(r)}</${tag}>`;
+const billIdAttr = (x, edit) => edit ? ` data-id="${x.id != null ? esc(x.id) : 'draft'}"` : '';
+
+function invoiceHTML(x, edit = false){
+  const rows = x.items.map((i,k) => `<tr><td class="sn">${k+1}</td><td>${esc(i.n)}</td><td class="r">${money(i.q)}${i.u ? ' ' + esc(i.u) : ''}</td>${rateCell('td', 'r', k, i.r, edit)}<td class="r">${money(i.q*i.r)}</td></tr>`).join('');
+  return `<section class="inv"${billIdAttr(x, edit)}>
+    <div class="inv-top">
+      <div><div class="inv-firm">${esc(BILL_TITLE)}</div></div>
+      <div class="inv-no">Bill no.<b>${esc(x.billNo)}</b></div>
+    </div>
+    <hr class="inv-rule">
+    <div class="inv-parties">
+      <div>
+        <div class="inv-k">Billed to</div>
+        <div class="inv-shop">${esc(x.shop)}</div>
+        ${x.addr ? `<div>${esc(x.addr)}</div>` : ''}
+        ${x.phone ? `<div>Phone ${esc(x.phone)}</div>` : ''}
+      </div>
+      <div class="ra">
+        <div class="inv-k">Date</div><div>${esc(when(x))}</div>
+        <div class="inv-k" style="margin-top:10px">Order taken by</div><div>${esc(x.staff)}</div>
+      </div>
+    </div>
+    <table>
+      <thead><tr><th class="sn">S.N.</th><th>Item</th><th class="r">Qty</th><th class="r">Rate</th><th class="r">Amount</th></tr></thead>
+      <tbody>${rows}</tbody>
+    </table>
+    ${discPct(x) ? `<div class="inv-subs">
+      <div><span>Subtotal</span><span>Rs ${money(subTot(x))}</span></div>
+      <div><span>Discount (${pctText(discPct(x))}%)</span><span>− Rs ${money(discAmt(x))}</span></div>
+    </div>` : ''}
+    <div class="inv-total"><div><span>Total</span><span>Rs ${money(tot(x))}</span></div></div>
+    <div class="inv-sign"><div>Received by</div><div>Signature</div></div>
+  </section>`;
+}
+
+// Receipt for roll printers and "A4, many bills": a plain table, one row per item.
+// tile = the copy packed onto A4 sheets (same design, slightly smaller type)
+function receiptHTML(x, tile = false, edit = false){
+  const nb = v => esc(v).replace(/(\d) (?=(?:ml|g|kg|ltr|l|pc|pkt)\b)/g, '$1&nbsp;');     // keep "500 ml" on one line
+  const qty = i => `${money(i.q)}${i.u ? '&nbsp;' + esc(i.u) : ''}`;
+  const rows = x.items.map((i, k) => `<span class="rx-n">${nb(i.n)}<small class="rx-at">@ ${rateCell('span', '', k, i.r, edit)}</small></span>` +
+    `<span class="rx-q">${qty(i)}</span>${rateCell('span', 'rx-r', k, i.r, edit)}<span class="rx-a">${money(i.q * i.r)}</span>`).join('');
+  const where = [x.addr, x.phone].filter(Boolean).map(esc).join(' · ');
+  return `<section class="rcpt${tile ? ' tile' : ''}"${billIdAttr(x, edit)}>
+    <div class="rx-title">${esc(BILL_TITLE)}</div>
+    <div class="rx-meta"><span>Bill no. <b>${esc(x.billNo)}</b></span><span>${esc(when(x))}</span></div>
+    <div class="rx-to"><b>${esc(x.shop)}</b>${where ? `<span>${where}</span>` : ''}<span>Order taken by ${esc(x.staff)}</span></div>
+    <div class="rx-items"><span class="rx-h rx-n">Item</span><span class="rx-h rx-q">Qty</span><span class="rx-h rx-r">Rate</span><span class="rx-h rx-a">Amount</span>${rows}</div>
+    ${discPct(x) ? `<div class="rx-sum"><span>Subtotal</span><span>${money(subTot(x))}</span></div>
+    <div class="rx-sum"><span>Discount ${pctText(discPct(x))}%</span><span>− ${money(discAmt(x))}</span></div>` : ''}
+    <div class="rx-total"><span>Total</span><span>Rs ${money(tot(x))}</span></div>
+    <div class="rx-signs"><span>Received by</span><i></i><span>Signature</span><i></i></div>
+  </section>`;
+}
+
+// ===== Preview =====
+function showPreview(bills){
+  const paper = getPaper();
+  bills = bills.slice().sort((a, b) => (+a.billNo || 0) - (+b.billNo || 0));     // same order as they print
+  previewIds = bills.map(x => x.id);
+  $('pvTitle').innerHTML = esc(bills.length === 1
+    ? `Bill ${bills[0].billNo}, ${bills[0].shop}`
+    : `${billsWord(bills.length)} on ${PAPERS[paper].label}`) + '<small class="pvtip">Tap a rate to change it</small>';
+  $('pvEdit').style.display = $('pvDisc').style.display = bills.length === 1 ? '' : 'none';
+  $('pvBody').innerHTML = paper === 'a4multi'
+    ? packSheets(bills, true).map(sh => `<div class="paper p-a4multi">${sh}</div>`).join('')
+    : bills.map(x => `<div class="paper p-${paper}">${billHTML(x, paper, true)}</div>`).join('');
+  if(paper === 'a4multi'){                    // shrink the A4 sheets to fit a phone screen
+    const z = Math.min(1, (document.documentElement.clientWidth - 24) / (210 * MM));
+    $('pvBody').querySelectorAll('.paper').forEach(el => el.style.zoom = z);
+  }
+  $('preview').classList.add('show');
+  $('preview').scrollTop = 0;
+  scrollLock(true);
+}
+function preview(id){
+  if(!unlocked) return;
+  const x = get().find(o => o.id === id); if(x) showPreview([x]);
+}
+function previewAll(){
+  if(!unlocked) return;
+  const o = filtered(); if(o.length) showPreview(o);
+}
+// ===== Changing a rate straight on the bill preview (office only) =====
+function bindRateEdit(box, commit){
+  box.addEventListener('click', e => { const c = e.target.closest('.ed'); if(c && !c.querySelector('input')) startRateEdit(c, commit); });
+  box.addEventListener('keydown', e => {
+    const c = e.target.closest('.ed');
+    if(c && e.target === c && (e.key === 'Enter' || e.key === ' ')){ e.preventDefault(); startRateEdit(c, commit); }
+  });
+}
+function startRateEdit(cell, commit){
+  const sec = cell.closest('[data-id]'); if(!sec) return;
+  const id = sec.dataset.id === 'draft' ? 'draft' : +sec.dataset.id, k = +cell.dataset.i;
+  const old = +cell.textContent.replace(/[^\d.]/g, '') || 0;
+  const keep = cell.innerHTML, inp = document.createElement('input');
+  inp.type = 'number'; inp.inputMode = 'decimal'; inp.step = 'any'; inp.min = '0'; inp.className = 'ed-in';
+  inp.value = old || ''; inp.setAttribute('aria-label', 'New rate');
+  cell.innerHTML = ''; cell.appendChild(inp); inp.focus(); inp.select();
+  let done = false;
+  const finish = ok => {
+    if(done) return; done = true;
+    const v = inp.value.trim(), r = Math.round(+v * 100) / 100;
+    if(ok && v !== '' && r >= 0 && r !== old) commit(id, k, r);
+    if(cell.isConnected && cell.contains(inp)) cell.innerHTML = keep;      // nothing changed: put the old rate back
+  };
+  inp.addEventListener('keydown', e => {
+    if(e.key === 'Enter'){ e.preventDefault(); finish(true); }
+    else if(e.key === 'Escape'){ e.preventDefault(); e.stopPropagation(); finish(false); }
+  });
+  inp.addEventListener('blur', () => finish(true));
+  inp.addEventListener('click', e => e.stopPropagation());
+}
+// A saved bill's rate changed: save it
+function saveRateEdit(id, k, r){
+  const o = get(), x = o.find(b => b.id === id); if(!x || !x.items[k]) return;
+  const it = x.items[k];
+  it.r = r; x.edited = true; x.editedTs = Date.now();
+  if(!put(o)){ toast('This device could not save the change', true); return; }
+  rememberItems([it]);
+  refreshAfterRateEdit();
+  toast(`${it.n}: Rs ${money(r)}. Bill ${x.billNo} total Rs ${money(tot(x))}`);
+}
+
+function closePreview(){
+  $('preview').classList.remove('show');
+  previewIds = [];
+  scrollLock(false);
+}
+function printPreview(){
+  if(!unlocked) return;
+  printBills(sorted().filter(x => previewIds.includes(x.id)));
+}
+function editFromPreview(){ const id = previewIds[0]; closePreview(); editOrder(id); }
+
+// ===== Printing =====
+// Lays the bills out for the chosen paper and opens the print window.
+// A bill is NOT removed when Print is pressed: once the print window closes, the office is asked
+// whether the paper came out right, and only the bills confirmed as printed are deleted.
+// (Browsers never tell a web page whether the printer really printed, so a person confirms it.)
+function printBills(bills, paper = getPaper(), askAfter = true){
+  if(!bills.length) return;
+  $('pageStyle').textContent = PAPERS[paper].page;
+  $('bill').className = 'pp-' + paper;
+  $('bill').innerHTML = printHTML(bills, paper);
+  setPrintTitle();
+  window.print();                                  // on computers this waits until the print window is closed
+  if(askAfter) setTimeout(() => confirmPrinted(bills), 250);
+}
+
+// "Did it print?" One bill: yes or no. Several: a ticked list, untick any that did not come out right.
+function confirmPrinted(bills){
+  if(!unlocked || !bills.length || $('modal').classList.contains('show')) return;
+  const snap = bills.map(b => ({id:b.id, billNo:b.billNo, shop:b.shop, v:b.editedTs || b.ts || 0}));
+  const one = snap.length === 1;
+  let chosen = snap;
+  const okText = n => n ? `Delete ${billsWord(n)}` : 'Nothing ticked';
+  openModal({
+    title: one ? `Did bill ${snap[0].billNo} print correctly?` : `Did all ${snap.length} bills print correctly?`,
+    body: one
+      ? `<p class="mtext">${esc(snap[0].shop)}. If the bill came out of the printer properly, it will be deleted from the app. If not, keep it and print it again.</p>`
+      : `<p class="mtext">Untick any bill that did not come out properly. The ticked bills will be deleted from the app; the rest stay for printing again.</p>
+         <ul class="pdl">${snap.map((b, i) => `<li><label><input type="checkbox" checked data-i="${i}"><b>Bill ${esc(b.billNo)}</b><span>${esc(b.shop)}</span></label></li>`).join('')}</ul>`,
+    ok: one ? 'Yes, delete it' : okText(snap.length),
+    cancel: one ? 'No, keep it' : 'Keep all',
+    focusCancel: true,                             // Enter or Esc never deletes by accident
+    onOk(){
+      if(!one) chosen = [...$('mBody').querySelectorAll('.pdl input')].filter(c => c.checked).map(c => snap[+c.dataset.i]);
+      return true;
+    }
+  }).then(ok => {
+    if(ok && chosen.length) deletePrinted(chosen);
+    else toast(one ? `Bill ${snap[0].billNo} kept` : 'Bills kept');
+  });
+  if(!one) $('mBody').querySelector('.pdl').onchange = () => {
+    const n = $('mBody').querySelectorAll('.pdl input:checked').length;
+    $('mOk').textContent = okText(n); $('mOk').disabled = !n;
+  };
+}
+
+// Removes the bills confirmed as printed. A bill changed after it was printed is kept (the paper is out of date).
+function deletePrinted(chosen){
+  const want = new Map(chosen.map(b => [b.id, b.v]));
+  const o = get(), gone = new Set(), changed = [];
+  o.forEach(x => { if(want.has(x.id)) ((x.editedTs || x.ts || 0) === want.get(x.id) ? gone.add(x.id) : changed.push(x.billNo)); });
+  // Shop details stay in the shop list after the bill is gone
+  const newShops = o.filter(x => gone.has(x.id) && mergeShop(shopRow(x, Math.floor((x.editedTs || stampOf(x) || 0) / 1000))));
+  if(newShops.length){ saveDir(); queueShops(newShops.map(x => DIR.get(shopKey(x.shop)))); syncShops(); }
+  // Pick the next bill in the list to show
+  const shown = filtered(), at = shown.findIndex(x => x.id === selId), keep = x => !gone.has(x.id);
+  if(gone.has(selId)) selId = ((at >= 0 && (shown.slice(at + 1).find(keep) || shown.slice(0, at).reverse().find(keep))) || {}).id ?? null;
+  if(gone.size && !put(o.filter(keep))){ toast('This device could not delete the bills', true); return; }
+  list();
+  if(previewIds.length){ const left = sorted().filter(x => previewIds.includes(x.id)); left.length ? showPreview(left) : closePreview(); }
+  if(changed.length) toast(`Bill ${changed.join(', ')} changed after printing, so it was kept`, true);
+  else toast(gone.size === 1 ? 'Printed bill deleted' : `${gone.size} printed bills deleted`);
+}
+function pr(id){
+  if(!unlocked) return;
+  const x = get().find(o => o.id === id); if(x) printBills([x]);
+}
+function prAll(){
+  if(!unlocked) return;
+  printBills(filtered());
+}
+// Printing from the browser menu: print the selected bill instead of a blank page, then ask as usual
+let menuPrint = null;
+window.addEventListener('beforeprint', () => {
+  if(!$('bill').innerHTML && unlocked && selId && !$('modal').classList.contains('show')){
+    const x = get().find(o => o.id === selId);
+    if(x){ const paper = getPaper(); $('pageStyle').textContent = PAPERS[paper].page; $('bill').className = 'pp-' + paper; $('bill').innerHTML = printHTML([x], paper); menuPrint = x; }
+  }
+  setPrintTitle();
+});
+window.addEventListener('afterprint', () => {
+  setTimeout(() => {
+    $('bill').innerHTML = ''; restoreTitle();
+    if(menuPrint){ const x = menuPrint; menuPrint = null; confirmPrinted([x]); }
+  }, 0);
+});
+// Browsers may print the page title in the page corner: show "Estimate" there, not the business name
+const APP_TITLE = document.title;
+function setPrintTitle(){ document.title = BILL_TITLE; }
+function restoreTitle(){ document.title = APP_TITLE; }
+
+// ===== Keyboard: PIN typing and Esc to close preview =====
+document.addEventListener('keydown', e => {
+  // Ctrl+P / Cmd+P: print the bill on screen instead of the whole page
+  if((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === 'p'){
+    e.preventDefault();
+    if($('modal').classList.contains('show')) return;
+    if(!unlocked || $('vLock').classList.contains('on')){ toast('Open the office to print bills'); return; }
+    if($('preview').classList.contains('show')) printPreview();
+    else if(selId) pr(selId);
+    return;
+  }
+  if($('modal').classList.contains('show')) return;
+  if(e.key === 'Escape' && $('preview').classList.contains('show')){ closePreview(); return; }
+  // Office on a computer: arrow keys move through the bills
+  if($('vOffice').classList.contains('on') && wide() && (e.key === 'ArrowDown' || e.key === 'ArrowUp')
+     && !/INPUT|SELECT|TEXTAREA/.test(e.target.tagName)){
+    e.preventDefault();
+    const row = stepBill(e.key === 'ArrowDown' ? 1 : -1);
+    if(row) row.focus({preventScroll:true});
+    return;
+  }
+  if($('vLock').classList.contains('on')){
+    if(/^[0-9]$/.test(e.key)) pinKey(e.key);
+    else if(e.key === 'Backspace') pinKey('B');
+    else if(e.key === 'Enter') tryUnlock();
+  }
+});
+
+// ===== Start =====
+(function init(){
+  $('brandName').textContent = FIRM.name;
+  let o = get();
+
+  // One-time clean-up on each device: remove the example bills and example salesman names
+  // left over from earlier test versions (Ramesh, Suresh, Hari, Bikash and the sample bills)
+  let removed = 0;
+  if(!load(CLEAN_KEY)){
+    const before = o.length;
+    o = o.filter(x => !EXAMPLE_STAFF.includes(x.staff) && x.id !== 1 && x.id !== 2);   // ids 1 and 2 were the sample bills
+    removed = before - o.length;
+    if(!STAFF.includes(load(STAFF_KEY))) { try { localStorage.removeItem(STAFF_KEY); } catch(e) {} }
+    store(CLEAN_KEY, '1');
+  }
+
+  let n = o.reduce((m,x) => Math.max(m, x.billNo || 0), 0);
+  o.forEach(x => { if(!x.billNo) x.billNo = ++n; });
+  put(o);
+  loadCustom();
+  o.slice().sort((a,b) => a.billNo - b.billNo).forEach(x => rememberItems(x.items));
+  setDir(readJSON(DIR_KEY, []));                     // shop list on this device
+  seedShops(o);                                      // once: shops from bills already here
+  syncShops();                                       // send new shops online, fetch the latest list
+  window.addEventListener('online', syncShops);
+  document.addEventListener('visibilitychange', () => {   // app opened again: refresh at most once a minute
+    if(document.visibilityState === 'visible' && Date.now() - lastSync > 60000) syncShops();
+  });
+
+  $('items').addEventListener('input', recalc);
+  $('disc').addEventListener('input', recalc);
+  $('shop').addEventListener('input', autofillShop);
+  $('shop').addEventListener('change', autofillShop);
+  // Typing in a filled-in field makes it the marketer's own value
+  DETAILS.forEach(f => $(f).addEventListener('input', () => $(f).classList.remove('auto')));
+  // Office filters and rows
+  $('orders').addEventListener('click', onLedgerClick);
+  bindRateEdit($('pvBody'), saveRateEdit);          // office: tap a rate on a bill preview to change it
+  bindRateEdit($('dBody'), saveRateEdit);
+  $('orders').addEventListener('dblclick', e => {
+    const row = e.target.closest('.entry'); if(row && !e.target.closest('button')) preview(+row.dataset.id);
+  });
+  $('orders').addEventListener('keydown', e => {
+    const row = e.target.closest('.entry');
+    if(row && e.target === row && (e.key === 'Enter' || e.key === ' ')){ e.preventDefault(); onLedgerClick({target:row}); }
+  });
+  $('q').addEventListener('input', () => { filt.q = $('q').value; list(); });
+  $('mkRow').addEventListener('click', e => {
+    const b = e.target.closest('.mk'); if(!b) return;
+    filt.staff = filt.staff === b.dataset.s ? '' : b.dataset.s;      // tap again to show everyone
+    list();
+  });
+  $('fDay').addEventListener('click', e => {
+    const b = e.target.closest('[data-d]'); if(!b) return;
+    filt.day = b.dataset.d; filt.date = '';
+    syncFilterButtons(); list();
+  });
+  $('fDate').addEventListener('change', () => {
+    filt.date = $('fDate').value; filt.day = filt.date ? 'date' : 'all';
+    syncFilterButtons(); list();
+  });
+  updatePaperLabel();
+
+  renderStaff(); renderKeypad(); drawDots();
+  clearForm();
+  if(removed) toast(`Removed ${removed} example ${removed === 1 ? 'bill' : 'bills'} from earlier tests`);
+})();
+</script>
+</body>
+</html>
